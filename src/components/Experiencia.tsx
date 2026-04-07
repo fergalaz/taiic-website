@@ -1,16 +1,8 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function Experiencia() {
   return (
-    <motion.section
+    <section
       id="experiencia"
       className="py-32 md:py-40 px-4"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
     >
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -66,6 +58,6 @@ export default function Experiencia() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

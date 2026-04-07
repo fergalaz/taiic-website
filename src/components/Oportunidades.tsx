@@ -54,7 +54,7 @@ export default function Oportunidades() {
               className={`${card.colSpan} bg-white/[0.02] ring-1 ring-white/[0.06] p-1.5 rounded-[2rem]`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true, margin: "0px", amount: 0.1 }}
               transition={{
                 duration: 0.8,
                 ease: [0.32, 0.72, 0, 1],

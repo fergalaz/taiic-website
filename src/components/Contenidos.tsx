@@ -28,13 +28,9 @@ const pillars = [
 
 export default function Contenidos() {
   return (
-    <motion.section
+    <section
       id="contenidos"
       className="py-32 md:py-40 px-4"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
     >
       <div className="max-w-[1400px] mx-auto">
         <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-4">
@@ -53,7 +49,7 @@ export default function Contenidos() {
                 className="flex items-start gap-4 py-4 border-b border-white/[0.06] group cursor-default hover:translate-x-2 transition-transform duration-300"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "0px", amount: 0.1 }}
                 transition={{
                   duration: 0.5,
                   ease: [0.32, 0.72, 0, 1],
@@ -75,7 +71,7 @@ export default function Contenidos() {
                 key={pillar.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "0px", amount: 0.1 }}
                 transition={{
                   duration: 0.5,
                   ease: [0.32, 0.72, 0, 1],
@@ -98,6 +94,6 @@ export default function Contenidos() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

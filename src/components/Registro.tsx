@@ -83,13 +83,9 @@ export default function Registro() {
   };
 
   return (
-    <motion.section
+    <section
       id="registro"
       className="py-32 md:py-40 px-4"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
     >
       <div className="max-w-[1400px] mx-auto text-center">
         <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-4">
@@ -286,6 +282,6 @@ export default function Registro() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

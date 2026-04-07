@@ -25,13 +25,9 @@ const teamMembers = [
 
 export default function Equipo() {
   return (
-    <motion.section
+    <section
       id="equipo"
       className="py-32 md:py-40 px-4"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
     >
       <div className="max-w-[1400px] mx-auto">
         <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-4">
@@ -76,7 +72,7 @@ export default function Equipo() {
                   className={member.colSpan}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{ once: true, margin: "0px", amount: 0.1 }}
                   transition={{
                     duration: 0.6,
                     ease: [0.32, 0.72, 0, 1],
@@ -107,6 +103,6 @@ export default function Equipo() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
