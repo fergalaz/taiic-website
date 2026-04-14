@@ -6,13 +6,13 @@ const equipo = [
   {
     nombre: "Mauricio Agudelo",
     rol: "Fundador & Director",
-    foto: "https://picsum.photos/seed/taiic-mauricio/400/500",
+    foto: "/team/mauricio-agudelo.webp",
     bio: "Más de dos décadas en la intersección de tecnología, economía y política pública en América Latina. Como director en CAF—Banco de Desarrollo de América Latina y el Caribe—construyó desde cero la plataforma de inversión en transformación digital de la institución, movilizando más de USD 5 mil millones en financiamiento y catalizando aproximadamente USD 10–12 mil millones en inversiones tecnológicas regionales. Hoy asesora a gobiernos, bancos de desarrollo y organizaciones sobre el impacto económico e institucional de la inteligencia artificial y las tecnologías estratégicas en mercados emergentes.",
   },
   {
     nombre: "Bernardita Oyarzún",
     rol: "Co-Fundadora & Directora BOI Events",
-    foto: "https://picsum.photos/seed/taiic-bernardita/400/500",
+    foto: "/team/bernardita-oyarzun.webp",
     bio: "Amplia trayectoria en programación ejecutiva y relacionamiento con stakeholders de alto nivel en toda la región. Co-dirige la programación del foro y la curaduría de speakers internacionales. Su experiencia en diseño de experiencias estratégicas para audiencias ejecutivas asegura que cada edición del AI Insight Circle cumpla con el estándar que exige su audiencia.",
   },
 ];
