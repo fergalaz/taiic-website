@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Experiencia from "@/components/Experiencia";
-import Oportunidades from "@/components/Oportunidades";
-import Equipo from "@/components/Equipo";
+import SobreNosotros from "@/components/SobreNosotros";
 import Contenidos from "@/components/Contenidos";
-import Registro from "@/components/Registro";
+import ProximoEvento from "@/components/ProximoEvento";
+import Contacto from "@/components/Contacto";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,10 +14,10 @@ export default function Home() {
       <main>
         <Hero />
         <Experiencia />
-        <Oportunidades />
-        <Equipo />
+        <SobreNosotros />
         <Contenidos />
-        <Registro />
+        <ProximoEvento />
+        <Contacto />
       </main>
       <Footer />
     </>

@@ -1,164 +1,110 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "@phosphor-icons/react";
-
-const entryEase = [0.32, 0.72, 0, 1] as const;
+import { ArrowRight, ArrowDown } from "@phosphor-icons/react";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-center py-32 px-4 overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center justify-center px-4 overflow-hidden"
     >
-      {/* Background gradient mesh */}
+      {/* Background — abstract pattern placeholder (replace with video/brandbook image) */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(201,168,76,0.05), transparent 60%)",
+            "linear-gradient(135deg, #1A1A33 0%, #0F0F24 40%, #1A1A33 100%)",
         }}
       />
 
-      <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-        {/* Left column */}
-        <motion.div
-          className="lg:col-span-7"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: entryEase }}
-        >
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6 block">
-            Strategic Intelligence for the AI Economy
-          </span>
+      {/* Decorative vertical bars — brandbook reference */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-[0.06] pointer-events-none">
+        <div className="flex gap-6 h-full">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="w-[2px] h-full"
+              style={{
+                background: `linear-gradient(180deg, transparent, #E5B765 ${30 + i * 5}%, transparent)`,
+              }}
+            />
+          ))}
+        </div>
+      </div>
 
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-tight leading-[0.9]">
-            Beyond
-            <br />
-            <span className="text-[#C9A84C]/80">AI</span> Hype
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-[#1A1A33]/60" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-[1400px] mx-auto w-full text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+        >
+          {/* Main title */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[0.08em] uppercase text-text-primary leading-tight">
+            The AI Insight Circle
           </h1>
 
-          <p className="text-lg md:text-xl text-[#8A8680] max-w-[50ch] leading-relaxed mt-10">
-            Donde la inteligencia artificial deja de ser promesa y se convierte
-            en criterio.
+          {/* Tagline */}
+          <p className="text-xl md:text-2xl lg:text-3xl text-text-primary/90 mt-6 font-light tracking-wide">
+            Donde la evidencia define la estrategia.
           </p>
 
-          <motion.a
-            href="#registro"
-            className="group mt-12 inline-flex items-center gap-3 bg-[#C9A84C] text-[#050505] font-semibold rounded-full px-8 py-4 text-base hover:bg-[#D4B55A] active:scale-[0.98] transition-all duration-300"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          >
-            Vive la experiencia
-            <span className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center group-hover:translate-x-1 transition-transform duration-300">
-              <ArrowRight weight="bold" size={16} />
-            </span>
-          </motion.a>
-        </motion.div>
+          {/* Support text */}
+          <p className="text-base md:text-lg text-text-secondary max-w-[70ch] mx-auto mt-8 leading-relaxed font-light">
+            Foro estrategico exclusivo para lideres de los sectores clave de America Latina.
+            Impacto cuantificable de la inteligencia artificial generativa (GenAI) en las industrias
+            y sectores criticos. 40-60 decisores. Una conversacion que la region necesita.
+          </p>
 
-        {/* Right column — decorative visual */}
-        <motion.div
-          className="lg:col-span-5 hidden lg:flex items-center justify-center"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3, ease: entryEase }}
-        >
-          <div className="relative w-full aspect-square max-w-[520px]">
-            {/* Outer glow ring */}
-            <div
-              className="absolute inset-0 rounded-full opacity-30"
-              style={{
-                background:
-                  "radial-gradient(circle, rgba(201,168,76,0.15), transparent 70%)",
-              }}
-            />
-
-            {/* Outer ring */}
-            <motion.div
-              className="absolute inset-0 rounded-full border border-[#C9A84C]/10"
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 60,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+            {/* Primary CTA */}
+            <motion.a
+              href="/registro"
+              className="group inline-flex items-center gap-3 bg-accent text-[#1A1A33] font-semibold rounded-full px-8 py-4 text-base hover:bg-accent-hover active:scale-[0.98] transition-all duration-300"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              {/* Orbiting dot */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#C9A84C]/40" />
-            </motion.div>
-
-            {/* Middle ring */}
-            <motion.div
-              className="absolute inset-12 rounded-full border border-white/[0.06]"
-              style={{
-                background:
-                  "conic-gradient(from 180deg, rgba(201,168,76,0.12), rgba(201,168,76,0.02), rgba(201,168,76,0.08), transparent)",
-              }}
-              animate={{ y: [0, -14, 0] }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-
-            {/* Inner core */}
-            <motion.div
-              className="absolute inset-24 rounded-full bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm flex items-center justify-center"
-              animate={{ y: [0, -8, 0] }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5,
-              }}
-            >
-              <span className="font-serif text-5xl text-[#C9A84C]/50 select-none">
-                AI
+              Solicitar Invitacion
+              <span className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center group-hover:translate-x-1 transition-transform duration-300">
+                <ArrowRight weight="bold" size={16} />
               </span>
-            </motion.div>
+            </motion.a>
+          </div>
 
-            {/* Floating particles */}
-            {[...Array(3)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1 h-1 rounded-full bg-[#C9A84C]/30"
-                style={{
-                  top: `${30 + i * 20}%`,
-                  left: `${20 + i * 25}%`,
-                }}
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.3, 0.7, 0.3],
-                }}
-                transition={{
-                  duration: 3 + i,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.8,
-                }}
-              />
-            ))}
+          {/* Secondary CTA — next event teaser */}
+          <div className="mt-10 flex items-center justify-center gap-2 text-text-secondary/60 text-sm">
+            <span className="font-light tracking-wide">
+              Proximo evento &bull; Ciudad por confirmar &bull; 2026
+            </span>
           </div>
         </motion.div>
       </div>
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
       >
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8A8680]/50">
+        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-secondary/40">
           Scroll
         </span>
         <motion.div
-          className="w-[1px] h-8 bg-gradient-to-b from-[#C9A84C]/40 to-transparent"
-          animate={{ scaleY: [1, 0.5, 1] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
+        >
+          <ArrowDown size={16} weight="light" className="text-accent/40" />
+        </motion.div>
       </motion.div>
+
+      {/* Gold line separator at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 gold-separator" />
     </section>
   );
 }
