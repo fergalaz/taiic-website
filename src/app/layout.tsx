@@ -10,11 +10,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "The AI Insight Circle | Donde la evidencia define la estrategia",
   description:
-    "Foro estrategico exclusivo para lideres de los sectores clave de America Latina. Impacto cuantificable de la inteligencia artificial generativa en las industrias y sectores criticos.",
+    "Foro estratégico exclusivo para líderes de los sectores clave de América Latina. Impacto cuantificable de la inteligencia artificial generativa en las industrias y sectores críticos.",
   openGraph: {
     title: "The AI Insight Circle | Donde la evidencia define la estrategia",
     description:
-      "Foro estrategico exclusivo para lideres de America Latina. 40-60 decisores. Una conversacion que la region necesita.",
+      "Foro estratégico exclusivo para líderes de América Latina. 40–60 decisores. Una conversación que la región necesita.",
     type: "website",
   },
 };

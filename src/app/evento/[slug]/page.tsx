@@ -59,21 +59,21 @@ export default function EventoPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">Tema Central</h2>
             <p className="text-[#8A8680] leading-relaxed">
-              Edicion inaugural en preparacion. Detalles proximamente.
+              Edición inaugural en preparación. Detalles próximamente.
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-bold mb-4">Formato</h2>
             <p className="text-[#8A8680] leading-relaxed">
-              Keynote + Dialogo Moderado + Workshops Practicos
+              Keynote + Diálogo Moderado + Workshops Prácticos
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-bold mb-4">Speakers</h2>
             <p className="text-[#8A8680] leading-relaxed">
-              Speakers confirmados proximamente.
+              Speakers confirmados próximamente.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function EventoPage() {
             href="/registro"
             className="inline-flex items-center gap-3 bg-[#E5B765] text-[#1A1A33] font-semibold rounded-full px-8 py-4 text-base hover:bg-[#F0C878] active:scale-[0.98] transition-all duration-300"
           >
-            Solicitar Invitacion
+            Solicitar Invitación
           </a>
         </div>
       </div>

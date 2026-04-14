@@ -12,33 +12,33 @@ import {
 const lineasTematicas = [
   {
     icon: TrendUp,
-    titulo: "Transformacion del modelo de negocio",
+    titulo: "Transformación del modelo de negocio",
     descripcion:
-      "Como cambia la ecuacion economica de una firma o empresa cuando la IA puede producir resultados sin intermediacion humana tradicional.",
+      "Cómo cambia la ecuación económica de una firma o empresa cuando la IA puede producir resultados sin intermediación humana tradicional.",
   },
   {
     icon: ChartBar,
     titulo: "ROI medible de la IA",
     descripcion:
-      "Datos reales de productividad, reduccion de costos y nuevas fuentes de ingreso en firmas y empresas que ya implementaron.",
+      "Datos reales de productividad, reducción de costos y nuevas fuentes de ingreso en firmas y empresas que ya implementaron.",
   },
   {
     icon: GlobeHemisphereWest,
-    titulo: "Jurisdiccion y contexto emergente",
+    titulo: "Jurisdicción y contexto emergente",
     descripcion:
-      "Lo que funciona en el mundo no se traduce automaticamente a los marcos de LATAM. Aqui se analiza la diferencia.",
+      "Lo que funciona en el mundo no se traduce automáticamente a los marcos de LATAM. Aquí se analiza la diferencia.",
   },
   {
     icon: ShieldCheck,
-    titulo: "Gobernanza y gestion del riesgo",
+    titulo: "Gobernanza y gestión del riesgo",
     descripcion:
-      "Marcos regulatorios, etica aplicada y los riesgos operativos concretos de adoptar (o no adoptar) IA.",
+      "Marcos regulatorios, ética aplicada y los riesgos operativos concretos de adoptar (o no adoptar) IA.",
   },
   {
     icon: Users,
     titulo: "Talento y estructura organizacional",
     descripcion:
-      "Que perfiles necesitara una firma, empresa o institucion en 3 anos y como reorganizar equipos hoy.",
+      "Qué perfiles necesitará una firma, empresa o institución en 3 años y cómo reorganizar equipos hoy.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function Contenidos() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
         >
-          Que se discute aqui
+          Qué se discute aquí
         </motion.h2>
 
         <motion.p
@@ -81,10 +81,10 @@ export default function Contenidos() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
         >
-          Cada sesion del AI Insight Circle aborda una dimension especifica del
+          Cada sesión del AI Insight Circle aborda una dimensión específica del
           impacto de la IA en el negocio. El contenido es curado por un panel asesor
           y presentado por expertos internacionales seleccionados por su rigor
-          academico y experiencia practica.
+          académico y experiencia práctica.
         </motion.p>
 
         {/* Grid of thematic cards */}

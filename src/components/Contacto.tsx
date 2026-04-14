@@ -61,7 +61,7 @@ export default function Contacto() {
     if (!formData.email.trim()) {
       newErrors.email = "El email es requerido";
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Ingresa un email valido";
+      newErrors.email = "Ingresa un email válido";
     }
     if (!formData.motivo) newErrors.motivo = "Selecciona un motivo";
 
@@ -115,8 +115,8 @@ export default function Contacto() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
         >
-          Para consultas sobre participacion, oportunidades de patrocinio o
-          informacion sobre proximas ediciones.
+          Para consultas sobre participación, oportunidades de patrocinio o
+          información sobre próximas ediciones.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
@@ -253,13 +253,13 @@ export default function Contacto() {
 
                 <div>
                   <label htmlFor="contacto-org" className={labelClasses}>
-                    Firma / Organizacion
+                    Firma / Organización
                   </label>
                   <input
                     type="text"
                     id="contacto-org"
                     name="organizacion"
-                    placeholder="Nombre de tu organizacion"
+                    placeholder="Nombre de tu organización"
                     value={formData.organizacion}
                     onChange={handleChange}
                     className={inputClasses}
@@ -300,7 +300,7 @@ export default function Contacto() {
                     <option value="" disabled>
                       Selecciona un motivo
                     </option>
-                    <option value="Participacion">Participacion</option>
+                    <option value="Participación">Participación</option>
                     <option value="Patrocinio">Patrocinio</option>
                     <option value="Prensa">Prensa</option>
                     <option value="Otro">Otro</option>

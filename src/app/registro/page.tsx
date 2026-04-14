@@ -65,7 +65,7 @@ export default function RegistroPage() {
     if (!formData.email.trim()) {
       newErrors.email = "El email es requerido";
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Ingresa un email valido";
+      newErrors.email = "Ingresa un email válido";
     }
     if (!formData.empresa.trim())
       newErrors.empresa = "La empresa es requerida";
@@ -109,15 +109,15 @@ export default function RegistroPage() {
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
         >
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#E5B765] mb-4">
-            Solicitud de Invitacion
+            Solicitud de Invitación
           </p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-4">
-            Solicitar Invitacion
+            Solicitar Invitación
           </h1>
           <p className="text-base text-[#8A8680] max-w-[55ch] mb-12 leading-relaxed">
-            Completa el siguiente formulario para solicitar tu invitacion al
-            proximo encuentro de The AI Insight Circle. El acceso es por
-            invitacion y esta sujeto a evaluacion.
+            Completa el siguiente formulario para solicitar tu invitación al
+            próximo encuentro de The AI Insight Circle. El acceso es por
+            invitación y está sujeto a evaluación.
           </p>
         </motion.div>
 
@@ -140,7 +140,7 @@ export default function RegistroPage() {
               </h2>
               <p className="text-base text-[#8A8680] mt-3 max-w-[45ch] text-center">
                 Revisaremos tu solicitud y nos pondremos en contacto contigo
-                para confirmar tu participacion.
+                para confirmar tu participación.
               </p>
               <a
                 href="/"
@@ -216,13 +216,13 @@ export default function RegistroPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="reg-empresa" className={labelClasses}>
-                    Empresa / Organizacion
+                    Empresa / Organización
                   </label>
                   <input
                     type="text"
                     id="reg-empresa"
                     name="empresa"
-                    placeholder="Nombre de tu organizacion"
+                    placeholder="Nombre de tu organización"
                     value={formData.empresa}
                     onChange={handleChange}
                     className={inputClasses}
@@ -272,9 +272,9 @@ export default function RegistroPage() {
                     <option value="Banca">Banca</option>
                     <option value="Retail">Retail</option>
                     <option value="Salud">Salud</option>
-                    <option value="Mineria y Energia">Mineria y Energia</option>
+                    <option value="Minería y Energía">Minería y Energía</option>
                     <option value="Telecomunicaciones">Telecomunicaciones</option>
-                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Tecnología">Tecnología</option>
                     <option value="Otro">Otro</option>
                   </select>
                   {errors.industria && (
@@ -285,7 +285,7 @@ export default function RegistroPage() {
                 </div>
                 <div>
                   <label htmlFor="reg-pais" className={labelClasses}>
-                    Pais{" "}
+                    País{" "}
                     <span className="text-[#8A8680]/40 font-normal">
                       (opcional)
                     </span>
@@ -294,7 +294,7 @@ export default function RegistroPage() {
                     type="text"
                     id="reg-pais"
                     name="pais"
-                    placeholder="Tu pais"
+                    placeholder="Tu país"
                     value={formData.pais}
                     onChange={handleChange}
                     className={inputClasses}
@@ -312,7 +312,7 @@ export default function RegistroPage() {
                 <textarea
                   id="reg-mensaje"
                   name="mensaje"
-                  placeholder="Cuentanos que te motiva a participar..."
+                  placeholder="Cuéntanos qué te motiva a participar..."
                   rows={4}
                   value={formData.mensaje}
                   onChange={handleChange}

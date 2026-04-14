@@ -55,9 +55,9 @@ export default function Hero() {
 
           {/* Support text */}
           <p className="text-base md:text-lg text-text-secondary max-w-[70ch] mx-auto mt-8 leading-relaxed font-light">
-            Foro estrategico exclusivo para lideres de los sectores clave de America Latina.
+            Foro estratégico exclusivo para líderes de los sectores clave de América Latina.
             Impacto cuantificable de la inteligencia artificial generativa (GenAI) en las industrias
-            y sectores criticos. 40-60 decisores. Una conversacion que la region necesita.
+            y sectores críticos. 40–60 decisores. Una conversación que la región necesita.
           </p>
 
           {/* CTAs */}
@@ -69,7 +69,7 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              Solicitar Invitacion
+              Solicitar Invitación
               <span className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center group-hover:translate-x-1 transition-transform duration-300">
                 <ArrowRight weight="bold" size={16} />
               </span>
@@ -79,7 +79,7 @@ export default function Hero() {
           {/* Secondary CTA — next event teaser */}
           <div className="mt-10 flex items-center justify-center gap-2 text-text-secondary/60 text-sm">
             <span className="font-light tracking-wide">
-              Proximo evento &bull; Ciudad por confirmar &bull; 2026
+              Próximo evento &bull; Ciudad por confirmar &bull; 2026
             </span>
           </div>
         </motion.div>

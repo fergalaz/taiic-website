@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Sobre Nosotros", href: "#sobre-nosotros" },
   { label: "Contenidos", href: "#contenidos" },
   { label: "Contacto", href: "#contacto" },
-  { label: "Solicitar Invitacion", href: "/registro", highlight: true },
+  { label: "Solicitar Invitación", href: "/registro", highlight: true },
 ];
 
 function handleSmoothScroll(
@@ -80,7 +80,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="relative z-50 w-10 h-10 flex items-center justify-center text-text-primary hover:text-accent transition-colors duration-300"
-            aria-label={isOpen ? "Cerrar menu" : "Abrir menu"}
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {isOpen ? (
               <X size={24} weight="light" />

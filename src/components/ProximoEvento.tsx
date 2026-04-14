@@ -20,7 +20,7 @@ export default function ProximoEvento() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
         >
-          Proxima Edicion
+          Próxima Edición
         </motion.p>
 
         <motion.h2
@@ -31,7 +31,7 @@ export default function ProximoEvento() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
         >
-          Proxima Edicion
+          Próxima Edición
         </motion.h2>
 
         {/* Featured event card */}
@@ -96,7 +96,7 @@ export default function ProximoEvento() {
               </div>
 
               <p className="text-sm text-text-secondary mb-4">
-                Formato: Keynote + Dialogo Moderado + Workshops Practicos
+                Formato: Keynote + Diálogo Moderado + Workshops Prácticos
               </p>
 
               <motion.a
@@ -105,7 +105,7 @@ export default function ProximoEvento() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
-                Solicitar Invitacion
+                Solicitar Invitación
                 <span className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center group-hover:translate-x-1 transition-transform duration-300">
                   <ArrowRight weight="bold" size={16} />
                 </span>

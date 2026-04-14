@@ -7,13 +7,13 @@ const equipo = [
     nombre: "Mauricio Agudelo",
     rol: "Fundador & Director",
     foto: "https://picsum.photos/seed/taiic-mauricio/400/500",
-    bio: "Mas de dos decadas en la interseccion de tecnologia, economia y politica publica en America Latina. Como director en CAF—Banco de Desarrollo de America Latina y el Caribe—construyo desde cero la plataforma de inversion en transformacion digital de la institucion, movilizando mas de USD 5 mil millones en financiamiento y catalizando aproximadamente USD 10-12 mil millones en inversiones tecnologicas regionales. Hoy asesora a gobiernos, bancos de desarrollo y organizaciones sobre el impacto economico e institucional de la inteligencia artificial y las tecnologias estrategicas en mercados emergentes.",
+    bio: "Más de dos décadas en la intersección de tecnología, economía y política pública en América Latina. Como director en CAF—Banco de Desarrollo de América Latina y el Caribe—construyó desde cero la plataforma de inversión en transformación digital de la institución, movilizando más de USD 5 mil millones en financiamiento y catalizando aproximadamente USD 10–12 mil millones en inversiones tecnológicas regionales. Hoy asesora a gobiernos, bancos de desarrollo y organizaciones sobre el impacto económico e institucional de la inteligencia artificial y las tecnologías estratégicas en mercados emergentes.",
   },
   {
-    nombre: "Bernardita Oyarzun",
+    nombre: "Bernardita Oyarzún",
     rol: "Co-Fundadora & Directora BOI Events",
     foto: "https://picsum.photos/seed/taiic-bernardita/400/500",
-    bio: "Amplia trayectoria en programacion ejecutiva y relacionamiento con stakeholders de alto nivel en toda la region. Co-dirige la programacion del foro y la curaduria de speakers internacionales. Su experiencia en diseno de experiencias estrategicas para audiencias ejecutivas asegura que cada edicion del AI Insight Circle cumpla con el estandar que exige su audiencia.",
+    bio: "Amplia trayectoria en programación ejecutiva y relacionamiento con stakeholders de alto nivel en toda la región. Co-dirige la programación del foro y la curaduría de speakers internacionales. Su experiencia en diseño de experiencias estratégicas para audiencias ejecutivas asegura que cada edición del AI Insight Circle cumpla con el estándar que exige su audiencia.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function SobreNosotros() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
         >
-          Quien organiza
+          Quién organiza
         </motion.h2>
 
         <motion.p
@@ -58,9 +58,9 @@ export default function SobreNosotros() {
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
         >
           The AI Insight Circle es una iniciativa de Mauricio Agudelo con la
-          produccion ejecutiva de Bernardita Oyarzun, BOI Events. Nace de una
-          conviccion simple: los lideres del sector empresarial en America Latina
-          merecen un espacio donde la conversacion sobre inteligencia artificial se
+          producción ejecutiva de Bernardita Oyarzún, BOI Events. Nace de una
+          convicción simple: los líderes del sector empresarial en América Latina
+          merecen un espacio donde la conversación sobre inteligencia artificial se
           sostenga con datos, no con promesas.
         </motion.p>
 
@@ -74,11 +74,11 @@ export default function SobreNosotros() {
             transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.15 }}
           >
             <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-accent mb-4">
-              Mision
+              Misión
             </h3>
             <p className="text-base text-text-secondary leading-relaxed">
-              Proveer a los decisores economicos de America Latina un espacio
-              estrategico, basado en evidencia, para comprender, medir y anticipar
+              Proveer a los decisores económicos de América Latina un espacio
+              estratégico, basado en evidencia, para comprender, medir y anticipar
               el impacto de la inteligencia artificial en sus modelos de negocio.
             </p>
           </motion.div>
@@ -91,12 +91,12 @@ export default function SobreNosotros() {
             transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
           >
             <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-accent mb-4">
-              Vision
+              Visión
             </h3>
             <p className="text-base text-text-secondary leading-relaxed">
-              Ser la plataforma de referencia regional donde la alta direccion de
-              las firmas, instituciones y empresas mas relevantes de America Latina
-              define su posicion frente a la transformacion tecnologica—con rigor,
+              Ser la plataforma de referencia regional donde la alta dirección de
+              las firmas, instituciones y empresas más relevantes de América Latina
+              define su posición frente a la transformación tecnológica—con rigor,
               sin ruido.
             </p>
           </motion.div>
@@ -179,11 +179,11 @@ export default function SobreNosotros() {
                 — BOI Events
               </p>
               <p className="text-base font-medium text-text-primary/80 mb-4">
-                Strategic Partner — Produccion Ejecutiva
+                Strategic Partner — Producción Ejecutiva
               </p>
               <p className="text-sm md:text-base text-text-secondary leading-relaxed max-w-[65ch]">
-                Socio operativo responsable de la produccion, logistica y ejecucion
-                de cada edicion del foro.
+                Socio operativo responsable de la producción, logística y ejecución
+                de cada edición del foro.
               </p>
             </div>
           </motion.div>

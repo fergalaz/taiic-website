@@ -10,21 +10,21 @@ import {
 const pilares = [
   {
     icon: ChartBar,
-    titulo: "Evidencia, no especulacion",
+    titulo: "Evidencia, no especulación",
     texto:
-      "Datos empiricos. ROI medible. Casos reales. Cada sesion esta disenada para producir claridad operativa, no entusiasmo vacio.",
+      "Datos empíricos. ROI medible. Casos reales. Cada sesión está diseñada para producir claridad operativa, no entusiasmo vacío.",
   },
   {
     icon: LockKey,
     titulo: "Acceso restringido",
     texto:
-      "40-60 participantes por edicion. Managing partners y directivos C-Level de las firmas y empresas mas influyentes de la region. Sin vendedores en el escenario. Sin audiencia pasiva.",
+      "40–60 participantes por edición. Managing partners y directivos C-Level de las firmas y empresas más influyentes de la región. Sin vendedores en el escenario. Sin audiencia pasiva.",
   },
   {
     icon: GlobeHemisphereWest,
     titulo: "Contexto LATAM",
     texto:
-      "Jurisdicciones. Economias emergentes. Estructuras institucionales propias. El discurso global sobre IA generativa no aplica sin traduccion. Aqui se hace esa traduccion.",
+      "Jurisdicciones. Economías emergentes. Estructuras institucionales propias. El discurso global sobre IA generativa no aplica sin traducción. Aquí se hace esa traducción.",
   },
 ];
 
@@ -70,9 +70,9 @@ export default function Experiencia() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
         >
-          Es un espacio de decision. Curado para quienes dirigen las firmas y
-          empresas de America Latina y necesitan claridad—no ruido—sobre como la
-          inteligencia artificial generativa esta redefiniendo el modelo de negocio
+          Es un espacio de decisión. Curado para quienes dirigen las firmas y
+          empresas de América Latina y necesitan claridad—no ruido—sobre cómo la
+          inteligencia artificial generativa está redefiniendo el modelo de negocio
           de sus sectores.
         </motion.p>
 
