@@ -1,17 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User } from "@phosphor-icons/react";
 
 const equipo = [
   {
     nombre: "Mauricio Agudelo",
     rol: "Fundador & Director",
+    foto: "https://picsum.photos/seed/taiic-mauricio/400/500",
     bio: "Mas de dos decadas en la interseccion de tecnologia, economia y politica publica en America Latina. Como director en CAF—Banco de Desarrollo de America Latina y el Caribe—construyo desde cero la plataforma de inversion en transformacion digital de la institucion, movilizando mas de USD 5 mil millones en financiamiento y catalizando aproximadamente USD 10-12 mil millones en inversiones tecnologicas regionales. Hoy asesora a gobiernos, bancos de desarrollo y organizaciones sobre el impacto economico e institucional de la inteligencia artificial y las tecnologias estrategicas en mercados emergentes.",
   },
   {
     nombre: "Bernardita Oyarzun",
     rol: "Co-Fundadora & Directora BOI Events",
+    foto: "https://picsum.photos/seed/taiic-bernardita/400/500",
     bio: "Amplia trayectoria en programacion ejecutiva y relacionamiento con stakeholders de alto nivel en toda la region. Co-dirige la programacion del foro y la curaduria de speakers internacionales. Su experiencia en diseno de experiencias estrategicas para audiencias ejecutivas asegura que cada edicion del AI Insight Circle cumpla con el estandar que exige su audiencia.",
   },
 ];
@@ -131,13 +132,13 @@ export default function SobreNosotros() {
                 delay: index * 0.1,
               }}
             >
-              {/* Photo placeholder */}
+              {/* Photo */}
               <div className="md:col-span-4 lg:col-span-3">
-                <div className="aspect-[4/5] rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center overflow-hidden">
-                  <User
-                    weight="thin"
-                    size={64}
-                    className="text-text-secondary/30"
+                <div className="aspect-[4/5] rounded-2xl bg-white/[0.04] border border-white/[0.08] overflow-hidden">
+                  <img
+                    src={miembro.foto}
+                    alt={miembro.nombre}
+                    className="w-full h-full object-cover grayscale"
                   />
                 </div>
               </div>

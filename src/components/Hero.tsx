@@ -9,14 +9,14 @@ export default function Hero() {
       id="home"
       className="relative min-h-[100dvh] flex items-center justify-center px-4 overflow-hidden"
     >
-      {/* Background — abstract pattern placeholder (replace with video/brandbook image) */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, #1A1A33 0%, #0F0F24 40%, #1A1A33 100%)",
-        }}
-      />
+      {/* Background image — executive boardroom atmosphere */}
+      <div className="absolute inset-0">
+        <img
+          src="https://picsum.photos/seed/taiic-hero-boardroom/1920/1080"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Decorative vertical bars — brandbook reference */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.06] pointer-events-none">
@@ -33,8 +33,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-[#1A1A33]/60" />
+      {/* Dark overlay — 60% per client spec */}
+      <div className="absolute inset-0 bg-[#1A1A33]/75" />
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto w-full text-center">
