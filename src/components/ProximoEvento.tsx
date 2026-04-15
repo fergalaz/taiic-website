@@ -6,7 +6,6 @@ import {
   CalendarBlank,
   MapPin,
   UsersThree,
-  User,
 } from "@phosphor-icons/react";
 
 const fadeUp = {
@@ -131,13 +130,13 @@ export default function ProximoEvento() {
                   Keynote Speaker
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
-                  {/* Speaker photo placeholder */}
+                  {/* Speaker photo */}
                   <div className="md:col-span-3 lg:col-span-2">
-                    <div className="aspect-square rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center overflow-hidden">
-                      <User
-                        weight="thin"
-                        size={56}
-                        className="text-text-secondary/30"
+                    <div className="aspect-square rounded-2xl bg-white/[0.04] border border-white/[0.08] overflow-hidden">
+                      <img
+                        src="/team/florencia-marotta.webp"
+                        alt="Florencia Marotta-Wurgler"
+                        className="w-full h-full object-cover grayscale"
                       />
                     </div>
                   </div>
