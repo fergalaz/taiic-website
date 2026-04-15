@@ -77,10 +77,10 @@ export default function Contacto() {
   };
 
   const inputClasses =
-    "w-full bg-[#1A1A33]/5 border border-[#1A1A33]/15 rounded-xl px-4 py-3.5 text-[#1A1A33] placeholder:text-[#1A1A33]/30 focus:ring-2 focus:ring-[#E5B765]/40 focus:border-[#E5B765]/60 focus:outline-none transition-all duration-500 text-sm";
+    "w-full bg-[#1A1A33]/5 border border-[#1A1A33]/15 rounded-xl px-4 py-4 text-[#1A1A33] placeholder:text-[#1A1A33]/30 focus:ring-2 focus:ring-[#E5B765]/40 focus:border-[#E5B765]/60 focus:outline-none transition-all duration-500 text-base";
 
   const labelClasses =
-    "block text-sm font-medium text-[#1A1A33]/80 mb-2 tracking-wide";
+    "block text-base font-medium text-[#1A1A33]/80 mb-2 tracking-wide";
 
   return (
     <section id="contacto" className="py-32 md:py-40 px-4 bg-white">
@@ -97,7 +97,7 @@ export default function Contacto() {
         </motion.p>
 
         <motion.h2
-          className="text-4xl md:text-5xl lg:text-6xl text-[#1A1A33] font-bold tracking-wide leading-tight mb-4"
+          className="text-4xl md:text-5xl lg:text-6xl text-[#1A1A33] font-bold tracking-wide leading-tight mb-6"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -108,7 +108,7 @@ export default function Contacto() {
         </motion.h2>
 
         <motion.p
-          className="text-base md:text-lg text-[#4A4A5A] max-w-[60ch] leading-relaxed mb-16"
+          className="text-lg md:text-xl text-[#4A4A5A] max-w-[68ch] leading-relaxed mb-16 font-light"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -116,7 +116,7 @@ export default function Contacto() {
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
         >
           Para consultas sobre participación, oportunidades de patrocinio o
-          información sobre próximas ediciones.
+          información de próximas ediciones de The AI Insight Circle.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
@@ -144,7 +144,7 @@ export default function Contacto() {
                   <p className="text-xs text-[#4A4A5A] uppercase tracking-wider">
                     Email
                   </p>
-                  <p className="text-base text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
+                  <p className="text-lg md:text-xl text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
                     info@insight-circle.ai
                   </p>
                 </div>
@@ -165,7 +165,7 @@ export default function Contacto() {
                   <p className="text-xs text-[#4A4A5A] uppercase tracking-wider">
                     WhatsApp
                   </p>
-                  <p className="text-base text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
+                  <p className="text-lg md:text-xl text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
                     Enlace directo
                   </p>
                 </div>
@@ -186,7 +186,7 @@ export default function Contacto() {
                   <p className="text-xs text-[#4A4A5A] uppercase tracking-wider">
                     LinkedIn
                   </p>
-                  <p className="text-base text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
+                  <p className="text-lg md:text-xl text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
                     The AI Insight Circle
                   </p>
                 </div>

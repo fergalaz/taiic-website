@@ -63,10 +63,11 @@ export default function Hero({
           </p>
 
           {/* Support text */}
-          <p className="text-base md:text-lg text-text-secondary max-w-[70ch] mx-auto mt-8 leading-relaxed font-light">
-            Foro estratégico exclusivo para líderes de los sectores clave de América Latina.
-            Impacto cuantificable de la inteligencia artificial generativa (GenAI) en las industrias
-            y sectores críticos. 40–60 decisores. Una conversación que la región necesita.
+          <p className="text-base md:text-lg lg:text-xl text-text-primary/85 max-w-[72ch] mx-auto mt-8 leading-relaxed font-light">
+            Foro estratégico exclusivo que reúne a líderes de los sectores clave de América Latina
+            para analizar el impacto cuantificable de la inteligencia artificial generativa (GenAI)
+            en industrias y ámbitos críticos. Un encuentro de 40 a 60 decisores de alto nivel,
+            diseñado para impulsar una conversación que la región necesita.
           </p>
 
           {/* CTAs */}
@@ -86,31 +87,21 @@ export default function Hero({
           </div>
 
           {/* Secondary CTA — next event teaser */}
-          <div className="mt-10 flex items-center justify-center gap-2 text-text-secondary/60 text-sm">
+          <a
+            href="#proximo-evento"
+            className="mt-10 inline-flex items-center justify-center gap-3 text-text-primary/80 hover:text-accent text-base md:text-lg group transition-colors duration-300"
+          >
             <span className="font-light tracking-wide">
               Próximo evento &bull; Ciudad por confirmar &bull; 2026
             </span>
-          </div>
+            <ArrowDown
+              size={20}
+              weight="light"
+              className="text-accent group-hover:translate-y-1 transition-transform duration-300"
+            />
+          </a>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-      >
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-secondary/40">
-          Scroll
-        </span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ArrowDown size={16} weight="light" className="text-accent/40" />
-        </motion.div>
-      </motion.div>
 
       {/* Gold line separator at bottom */}
       <div className="absolute bottom-0 left-0 right-0 gold-separator" />

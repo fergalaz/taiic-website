@@ -26,7 +26,7 @@ const lineasTematicas = [
     icon: GlobeHemisphereWest,
     titulo: "Jurisdicción y contexto emergente",
     descripcion:
-      "Lo que funciona en el mundo no se traduce automáticamente a los marcos de LATAM. Aquí se analiza la diferencia.",
+      "Lo que funciona en el mundo no se traduce automáticamente a los marcos de LATAM. Aquí se analizan las diferencias.",
   },
   {
     icon: ShieldCheck,
@@ -74,17 +74,17 @@ export default function Contenidos() {
         </motion.h2>
 
         <motion.p
-          className="text-base md:text-lg text-text-secondary max-w-[70ch] leading-relaxed mb-16"
+          className="text-lg md:text-xl text-text-primary/80 max-w-[78ch] leading-relaxed mb-16 font-light"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
         >
-          Cada sesión del AI Insight Circle aborda una dimensión específica del
+          Cada sesión de The AI Insight Circle aborda una dimensión específica del
           impacto de la IA en el negocio. El contenido es curado por un panel asesor
-          y presentado por expertos internacionales seleccionados por su rigor
-          académico y experiencia práctica.
+          y presentado por expertos internacionales reconocidos y seleccionados por
+          su rigor académico y experiencia práctica.
         </motion.p>
 
         {/* Grid of thematic cards */}
@@ -103,7 +103,7 @@ export default function Contenidos() {
                 delay: 0.15 + index * 0.08,
               }}
             >
-              <div className="h-full bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6 md:p-8 hover:border-accent/30 transition-all duration-500">
+              <div className="h-full bg-accent/[0.04] border border-accent/15 rounded-2xl p-7 md:p-8 hover:border-accent/40 transition-all duration-500">
                 <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
                   <linea.icon
                     weight="light"
@@ -111,10 +111,10 @@ export default function Contenidos() {
                     className="text-accent"
                   />
                 </div>
-                <h3 className="text-base font-bold text-text-primary mb-3 tracking-wide">
+                <h3 className="text-lg md:text-xl font-bold text-text-primary mb-3 tracking-wide">
                   {linea.titulo}
                 </h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
+                <p className="text-base md:text-[17px] text-text-primary/85 leading-relaxed font-light">
                   {linea.descripcion}
                 </p>
               </div>
