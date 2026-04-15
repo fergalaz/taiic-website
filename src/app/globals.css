@@ -115,3 +115,40 @@ select option {
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   opacity: 0.3;
 }
+
+/* Hero overlay — respects theme bg color */
+.hero-overlay {
+  background-color: rgba(26, 26, 51, 0.75);
+}
+
+/* Black theme override */
+.theme-black {
+  --bg: #050505;
+  --bg-dark: #000000;
+  background: #050505;
+}
+
+.theme-black body,
+body:has(.theme-black) {
+  background: #050505;
+}
+
+.theme-black .hero-overlay {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.85) 0%, rgba(5, 5, 5, 0.7) 50%, rgba(5, 5, 5, 0.4) 100%);
+}
+
+
+/* Hero text shadow for readability over detailed bg images */
+.theme-black section#home h1,
+.theme-black section#home p {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.95), 0 0 60px rgba(0, 0, 0, 0.8);
+}
+
+.theme-black footer {
+  background: #000000 !important;
+}
+
+/* Select dropdown in black theme */
+.theme-black select option {
+  background: #0A0A0B;
+}

@@ -8,12 +8,12 @@ import Contacto from "@/components/Contacto";
 import Footer from "@/components/Footer";
 import VersionSwitcher from "@/components/VersionSwitcher";
 
-export default function Home() {
+export default function HomeNegro() {
   return (
-    <>
+    <div className="theme-black min-h-[100dvh]">
       <Navbar />
       <main>
-        <Hero heroImage="/hero/nido_luminoso.webp" />
+        <Hero heroImage="/hero/circulo_luminoso.webp" objectPosition="center 80%" />
         <Experiencia />
         <SobreNosotros />
         <Contenidos />
@@ -21,7 +21,7 @@ export default function Home() {
         <Contacto />
       </main>
       <Footer />
-      <VersionSwitcher current="navy" />
-    </>
+      <VersionSwitcher current="black" />
+    </div>
   );
 }

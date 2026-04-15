@@ -3,7 +3,15 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "@phosphor-icons/react";
 
-export default function Hero() {
+interface HeroProps {
+  heroImage?: string;
+  objectPosition?: string;
+}
+
+export default function Hero({
+  heroImage = "/hero/nido_luminoso.webp",
+  objectPosition = "center center",
+}: HeroProps) {
   return (
     <section
       id="home"
@@ -12,9 +20,10 @@ export default function Hero() {
       {/* Background image — executive boardroom atmosphere */}
       <div className="absolute inset-0">
         <img
-          src="https://picsum.photos/seed/taiic-hero-boardroom/1920/1080"
+          src={heroImage}
           alt=""
           className="w-full h-full object-cover"
+          style={{ objectPosition }}
         />
       </div>
 
@@ -33,8 +42,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Dark overlay — 60% per client spec */}
-      <div className="absolute inset-0 bg-[#1A1A33]/75" />
+      {/* Dark overlay — theme-aware */}
+      <div className="absolute inset-0 hero-overlay" />
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto w-full text-center">
