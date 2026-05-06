@@ -1,39 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+/* =====================================================================
+   TAIIC — Design tokens (brandbook v3 + dirección editorial Aman)
+   ===================================================================== */
+
 :root {
-  --bg: #1A1A33;
-  --bg-dark: #141428;
-  --accent: #E5B765;
-  --accent-hover: #F0C878;
-  --text-primary: #E8E4DC;
-  --text-secondary: #8A8680;
+  /* Brandbook base */
+  --ink: #000000;            /* negro técnico */
+  --ink-warm: #1A1A33;       /* negro cálido brandbook (rgb 26/26/51) */
+  --ink-soft: #1A1A1A;       /* gold scale step */
+  --paper: #FFFFFF;
+  --cream: #F5EFD7;          /* gold-20 — fondo crema editorial */
+  --cream-soft: #F1E7C3;     /* gold-30 */
+  --gold: #D3AF37;           /* dorado principal */
+  --gold-warm: #DBBE5F;      /* gold-80 — hover */
+  --gold-pale: #E3CD87;      /* gold-60 — accents */
+
+  /* Semánticos */
+  --bg-page: var(--ink-warm);
+  --bg-cream: var(--cream);
+  --bg-paper: var(--paper);
+  --text-on-dark: rgba(255, 255, 255, 0.92);
+  --text-on-dark-soft: rgba(255, 255, 255, 0.55);
+  --text-on-light: var(--ink-warm);
+  --text-on-light-soft: rgba(26, 26, 51, 0.62);
+  --accent: var(--gold);
+  --hairline-on-light: rgba(26, 26, 51, 0.14);
+  --hairline-on-dark: rgba(255, 255, 255, 0.18);
+  --hairline-on-cream: rgba(26, 26, 51, 0.18);
+
+  /* Tracking editorial */
+  --tracking-display: 0.2em;
+  --tracking-title: 0.15em;
+  --tracking-caption: 0.22em;
+
+  /* Gradiente cinematográfico del brandbook (uso exclusivo Hero) */
+  --gradient-hero: radial-gradient(
+    ellipse at bottom left,
+    #D3AF37 0%,
+    #1A1A1A 60%,
+    #000000 100%
+  );
+
+  /* === Aliases retro-compat para componentes existentes === */
+  --bg: var(--ink-warm);
+  --bg-dark: var(--ink);
+  --accent-hover: var(--gold-warm);
+  --text-primary: var(--text-on-dark);
+  --text-secondary: var(--text-on-dark-soft);
+  --text-dark: var(--ink-warm);
+  --text-dark-secondary: var(--text-on-light-soft);
+  --bg-light: var(--paper);
   --surface: rgba(255, 255, 255, 0.04);
   --surface-border: rgba(255, 255, 255, 0.08);
   --surface-hover: rgba(255, 255, 255, 0.07);
-  --bg-light: #FFFFFF;
-  --text-dark: #1A1A33;
-  --text-dark-secondary: #4A4A5A;
 }
 
 @theme inline {
-  --color-background: var(--bg);
-  --color-foreground: var(--text-primary);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
+  --color-background: var(--bg-page);
+  --color-foreground: var(--text-on-dark);
+
+  /* Brandbook tokens (preferir estos en componentes nuevos) */
+  --color-ink: var(--ink);
+  --color-ink-warm: var(--ink-warm);
+  --color-paper: var(--paper);
+  --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
+  --color-gold: var(--gold);
+  --color-gold-warm: var(--gold-warm);
+  --color-gold-pale: var(--gold-pale);
+
+  /* Semánticos */
+  --color-text-on-dark: var(--text-on-dark);
+  --color-text-on-dark-soft: var(--text-on-dark-soft);
+  --color-text-on-light: var(--text-on-light);
+  --color-text-on-light-soft: var(--text-on-light-soft);
+  --color-hairline: var(--hairline-on-light);
+  --color-hairline-dark: var(--hairline-on-dark);
+  --color-hairline-cream: var(--hairline-on-cream);
+
+  /* Aliases retro-compat */
+  --color-accent: var(--gold);
+  --color-accent-hover: var(--gold-warm);
+  --color-text-primary: var(--text-on-dark);
+  --color-text-secondary: var(--text-on-dark-soft);
   --color-surface: var(--surface);
   --color-surface-border: var(--surface-border);
   --color-surface-hover: var(--surface-hover);
-  --color-bg-light: var(--bg-light);
-  --color-text-dark: var(--text-dark);
-  --color-text-dark-secondary: var(--text-dark-secondary);
-  --font-sans: var(--font-gilroy), 'Montserrat', system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono);
+  --color-bg-light: var(--paper);
+  --color-text-dark: var(--ink-warm);
+  --color-text-dark-secondary: var(--text-on-light-soft);
+
+  --font-sans: 'Gilroy', var(--font-inter), 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Gilroy', var(--font-inter), 'Helvetica Neue', Arial, sans-serif;
+
+  --tracking-display: var(--tracking-display);
+  --tracking-title: var(--tracking-title);
+  --tracking-caption: var(--tracking-caption);
 }
 
-/* Gilroy font-face */
+/* ---------------------------------------------------------------------
+   Tipografía local — Gilroy (brandbook); Inter via next/font fallback
+   --------------------------------------------------------------------- */
+
 @font-face {
   font-family: 'Gilroy';
   src: url('/fonts/Gilroy-Light.ttf') format('truetype');
@@ -41,7 +110,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Gilroy';
   src: url('/fonts/Gilroy-Regular.ttf') format('truetype');
@@ -49,7 +117,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Gilroy';
   src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
@@ -57,7 +124,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Gilroy';
   src: url('/fonts/Gilroy-Bold.ttf') format('truetype');
@@ -72,18 +138,17 @@
 }
 
 body {
-  background: var(--bg);
-  color: var(--text-primary);
-  font-family: 'Gilroy', 'Montserrat', system-ui, sans-serif;
-  font-weight: 300;
+  background: var(--bg-page);
+  color: var(--text-on-dark);
+  font-family: 'Gilroy', var(--font-inter), 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
 }
 
 ::selection {
-  background: rgba(229, 183, 101, 0.3);
-  color: var(--text-primary);
+  background: rgba(211, 175, 55, 0.35);
+  color: inherit;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -93,7 +158,7 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: var(--bg-page);
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.08);
@@ -103,52 +168,29 @@ html {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* Select dropdown styling for dark theme */
 select option {
-  background: #1A1A33;
-  color: var(--text-primary);
+  background: var(--ink-warm);
+  color: var(--text-on-dark);
 }
 
-/* Gold line separator utility */
+/* ---------------------------------------------------------------------
+   Utilities editoriales
+   --------------------------------------------------------------------- */
+
 .gold-separator {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: 0.3;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.35;
 }
 
-/* Hero overlay — respects theme bg color */
+.hairline {
+  border-color: var(--hairline-on-light);
+}
+.hairline-dark {
+  border-color: var(--hairline-on-dark);
+}
+
+/* Hero overlay legacy (Hero.tsx aún lo usa hasta refactor) */
 .hero-overlay {
-  background-color: rgba(26, 26, 51, 0.75);
-}
-
-/* Black theme override */
-.theme-black {
-  --bg: #050505;
-  --bg-dark: #000000;
-  background: #050505;
-}
-
-.theme-black body,
-body:has(.theme-black) {
-  background: #050505;
-}
-
-.theme-black .hero-overlay {
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.85) 0%, rgba(5, 5, 5, 0.7) 50%, rgba(5, 5, 5, 0.4) 100%);
-}
-
-
-/* Hero text shadow for readability over detailed bg images */
-.theme-black section#home h1,
-.theme-black section#home p {
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.95), 0 0 60px rgba(0, 0, 0, 0.8);
-}
-
-.theme-black footer {
-  background: #000000 !important;
-}
-
-/* Select dropdown in black theme */
-.theme-black select option {
-  background: #0A0A0B;
+  background-color: rgba(26, 26, 51, 0.55);
 }

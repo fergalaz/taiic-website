@@ -1,12 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Experiencia from "@/components/Experiencia";
-import SobreNosotros from "@/components/SobreNosotros";
 import Contenidos from "@/components/Contenidos";
+import FirstClosedDoor from "@/components/FirstClosedDoor";
+import ForWhom from "@/components/ForWhom";
+import ExpertStandard from "@/components/ExpertStandard";
 import ProximoEvento from "@/components/ProximoEvento";
+import SobreNosotros from "@/components/SobreNosotros";
 import Contacto from "@/components/Contacto";
 import Footer from "@/components/Footer";
-import VersionSwitcher from "@/components/VersionSwitcher";
 
 export default function Home() {
   return (
@@ -15,13 +17,15 @@ export default function Home() {
       <main>
         <Hero heroImage="/hero/nido_luminoso.webp" />
         <Experiencia />
-        <SobreNosotros />
         <Contenidos />
+        <FirstClosedDoor />
+        <ForWhom />
+        <ExpertStandard />
         <ProximoEvento />
+        <SobreNosotros />
         <Contacto />
       </main>
       <Footer />
-      <VersionSwitcher current="navy" />
     </>
   );
 }

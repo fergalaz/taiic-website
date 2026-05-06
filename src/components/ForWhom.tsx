@@ -2,15 +2,14 @@
 
 import { motion } from "framer-motion";
 
-const sectores = [
-  { numero: "01", nombre: "Legal" },
-  { numero: "02", nombre: "Finanzas" },
-  { numero: "03", nombre: "Infraestructura" },
-  { numero: "04", nombre: "Logística" },
-  { numero: "05", nombre: "Energía" },
-  { numero: "06", nombre: "Retail" },
-  { numero: "07", nombre: "Salud" },
-  { numero: "08", nombre: "Sector público" },
+const audiencia = [
+  "Socios directores",
+  "Asesores jurídicos generales",
+  "CEOs",
+  "COOs",
+  "CFOs",
+  "Miembros de directorio",
+  "Líderes seleccionados del sector público",
 ];
 
 const fadeUp = {
@@ -18,13 +17,13 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function Contenidos() {
+export default function ForWhom() {
   return (
     <section
-      id="contenidos"
-      className="bg-paper text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+      id="for-whom"
+      className="bg-cream text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
     >
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-20 md:mb-28">
           <motion.p
             className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-light"
@@ -34,7 +33,7 @@ export default function Contenidos() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
           >
-            Sector deep dives
+            For whom
           </motion.p>
 
           <motion.h2
@@ -45,33 +44,32 @@ export default function Contenidos() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
           >
-            Ocho sectores donde la IA{" "}
-            <strong className="font-bold">ya está cambiando las reglas</strong>.
+            La sala está pensada para{" "}
+            <strong className="font-bold">quienes deciden, no para quienes opinan</strong>.
           </motion.h2>
         </div>
 
-        {/* Lista numerada en dos columnas — separadores hairline */}
-        <ul className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 border-t border-[color:var(--ink-warm)]/15">
-          {sectores.map((sector, index) => (
+        <ul className="border-t border-[color:var(--ink-warm)]/15 max-w-[860px] mx-auto">
+          {audiencia.map((item, index) => (
             <motion.li
-              key={sector.nombre}
+              key={item}
               className="border-b border-[color:var(--ink-warm)]/15"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{
                 duration: 0.5,
                 ease: [0.32, 0.72, 0, 1],
-                delay: (index % 2) * 0.05 + Math.floor(index / 2) * 0.04,
+                delay: index * 0.05,
               }}
             >
-              <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-6 items-baseline py-7 md:py-8">
+              <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[5rem_1fr] gap-6 items-baseline py-7 md:py-9">
                 <span className="text-gold text-[11px] md:text-xs tracking-[0.2em] font-light">
-                  {sector.numero}
+                  {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="text-xl md:text-2xl font-light tracking-[0.01em]">
-                  {sector.nombre}
+                  {item}
                 </span>
               </div>
             </motion.li>

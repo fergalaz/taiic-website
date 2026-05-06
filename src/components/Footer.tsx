@@ -4,9 +4,9 @@ import { ArrowUp, LinkedinLogo } from "@phosphor-icons/react";
 
 const navLinks = [
   { label: "Experiencia", href: "#experiencia" },
-  { label: "Sobre Nosotros", href: "#sobre-nosotros" },
-  { label: "Contenidos", href: "#contenidos" },
-  { label: "Próximo Evento", href: "#proximo-evento" },
+  { label: "Sectores", href: "#contenidos" },
+  { label: "Próximas Experiencias", href: "#proximo-evento" },
+  { label: "Sobre", href: "#sobre-nosotros" },
   { label: "Contacto", href: "#contacto" },
 ];
 

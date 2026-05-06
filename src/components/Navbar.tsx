@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { List, X } from "@phosphor-icons/react";
 
 const navLinks = [
   { label: "Experiencia", href: "#experiencia" },
-  { label: "Sobre Nosotros", href: "#sobre-nosotros" },
-  { label: "Contenidos", href: "#contenidos" },
+  { label: "Sectores", href: "#contenidos" },
+  { label: "Próximas Experiencias", href: "#proximo-evento" },
+  { label: "Sobre", href: "#sobre-nosotros" },
   { label: "Contacto", href: "#contacto" },
-  { label: "Solicitar Invitación", href: "/registro", highlight: true },
+  { label: "Solicite su invitación", href: "/registro", highlight: true },
 ];
 
 function handleSmoothScroll(
@@ -17,7 +18,7 @@ function handleSmoothScroll(
   href: string,
   onAfter?: () => void
 ) {
-  if (href.startsWith("/")) return; // Let Next.js handle page navigation
+  if (href.startsWith("/")) return;
   e.preventDefault();
   const target = document.querySelector(href);
   if (target) {
@@ -28,13 +29,31 @@ function handleSmoothScroll(
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > window.innerHeight * 0.85);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Sobre el hero: navbar transparente + texto blanco.
+  // A partir del scroll: barra crema con backdrop blur + texto en ink-warm.
+  const headerBg = scrolled
+    ? "bg-[color:var(--cream)]/90 backdrop-blur-xl border-b border-[color:var(--ink-warm)]/8"
+    : "bg-transparent";
+  const textColor = scrolled ? "text-[color:var(--ink-warm)]" : "text-white";
+  const strokeColor = scrolled ? "var(--ink-warm)" : "#FFFFFF";
 
   return (
     <>
-      {/* Fixed transparent header */}
-      <header className="fixed top-0 left-0 right-0 z-40">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-6 flex items-center justify-between">
-          {/* Logo */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-500 ${headerBg}`}
+      >
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-5 flex items-center justify-between">
           <a
             href="#"
             onClick={(e) => {
@@ -44,54 +63,57 @@ export default function Navbar() {
             className="flex items-center gap-3 group"
           >
             <svg
-              width="36"
-              height="36"
+              width="32"
+              height="32"
               viewBox="0 0 36 36"
               fill="none"
-              className="shrink-0"
+              className="shrink-0 transition-colors duration-500"
             >
               <circle
                 cx="18"
                 cy="18"
                 r="17"
-                stroke="#E5B765"
-                strokeWidth="1.5"
+                stroke="var(--gold)"
+                strokeWidth="1.2"
               />
               <text
                 x="18"
                 y="20"
                 textAnchor="middle"
                 dominantBaseline="middle"
-                fill="#E5B765"
+                fill="var(--gold)"
                 fontSize="11"
                 fontWeight="700"
-                fontFamily="'Gilroy', 'Montserrat', sans-serif"
+                fontFamily="'Gilroy', 'Inter', sans-serif"
                 letterSpacing="0.05em"
               >
                 AI
               </text>
             </svg>
-            <span className="text-[11px] uppercase tracking-[0.15em] text-text-primary font-medium hidden sm:block">
+            <span
+              className={`text-[10px] uppercase tracking-[0.22em] font-light hidden sm:block transition-colors duration-500 ${textColor}`}
+            >
               The AI Insight Circle
             </span>
           </a>
 
-          {/* Hamburger button — always visible */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-50 w-10 h-10 flex items-center justify-center text-text-primary hover:text-accent transition-colors duration-300"
+            className={`relative z-50 w-10 h-10 flex items-center justify-center hover:text-gold transition-colors duration-500 ${textColor}`}
             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            style={isOpen ? { color: "#FFFFFF" } : undefined}
           >
             {isOpen ? (
-              <X size={24} weight="light" />
+              <X size={22} weight="light" />
             ) : (
-              <List size={24} weight="light" />
+              <List size={22} weight="light" />
             )}
+            {/* Stroke color hint para SVG sin clases */}
+            <span className="hidden" data-stroke={strokeColor} />
           </button>
         </div>
       </header>
 
-      {/* Fullscreen overlay menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -99,7 +121,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-[#1A1A33]/95 backdrop-blur-3xl flex items-center justify-center"
+            className="fixed inset-0 z-40 bg-[color:var(--ink-warm)]/95 backdrop-blur-3xl flex items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-8">
               {navLinks.map((link, i) => (
@@ -117,10 +139,10 @@ export default function Navbar() {
                   onClick={(e) =>
                     handleSmoothScroll(e, link.href, () => setIsOpen(false))
                   }
-                  className={`text-2xl md:text-4xl font-light tracking-wide transition-colors duration-300 ${
+                  className={`text-2xl md:text-3xl font-light tracking-[0.08em] uppercase transition-colors duration-300 ${
                     link.highlight
-                      ? "text-accent hover:text-accent-hover"
-                      : "text-text-primary/80 hover:text-text-primary"
+                      ? "text-gold hover:text-[color:var(--gold-warm)]"
+                      : "text-white/80 hover:text-white"
                   }`}
                 >
                   {link.label}

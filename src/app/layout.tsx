@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "The AI Insight Circle | Donde la evidencia define la estrategia",
+  title:
+    "The AI Insight Circle | Debida diligencia en IA para la alta dirección",
   description:
-    "Foro estratégico exclusivo para líderes de los sectores clave de América Latina. Impacto cuantificable de la inteligencia artificial generativa en las industrias y sectores críticos.",
+    "Círculo privado donde los principales tomadores de decisiones de América Latina analizan el impacto real y medible de la IA en sectores estratégicos — con expertos globales, evidencia sectorial y sin ruido comercial.",
   openGraph: {
-    title: "The AI Insight Circle | Donde la evidencia define la estrategia",
+    title:
+      "The AI Insight Circle | Debida diligencia en IA para la alta dirección",
     description:
-      "Foro estratégico exclusivo para líderes de América Latina. 40–60 decisores. Una conversación que la región necesita.",
+      "40–60 participantes seleccionados · Análisis profundos por sector · Formato Chatham House.",
     type: "website",
   },
 };
@@ -25,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${geistMono.variable} antialiased`}>
+    <html lang="es" className={`${inter.variable} antialiased`} data-scroll-behavior="smooth">
       <body className="min-h-[100dvh]">
         {/* Noise overlay */}
         <div

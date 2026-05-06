@@ -7,7 +7,6 @@ import {
   WhatsappLogo,
   LinkedinLogo,
   CheckCircle,
-  PaperPlaneTilt,
 } from "@phosphor-icons/react";
 
 interface FormData {
@@ -77,145 +76,132 @@ export default function Contacto() {
   };
 
   const inputClasses =
-    "w-full bg-[#1A1A33]/5 border border-[#1A1A33]/15 rounded-xl px-4 py-4 text-[#1A1A33] placeholder:text-[#1A1A33]/30 focus:ring-2 focus:ring-[#E5B765]/40 focus:border-[#E5B765]/60 focus:outline-none transition-all duration-500 text-base";
+    "w-full bg-transparent border-0 border-b border-[color:var(--ink-warm)]/25 px-0 py-3 text-[color:var(--ink-warm)] placeholder:text-[color:var(--ink-warm)]/35 focus:border-gold focus:outline-none transition-colors duration-500 text-base font-light tracking-[0.01em]";
 
   const labelClasses =
-    "block text-base font-medium text-[#1A1A33]/80 mb-2 tracking-wide";
+    "block text-[10px] uppercase tracking-[0.28em] text-[color:var(--ink-warm)]/55 mb-3 font-light";
 
   return (
-    <section id="contacto" className="py-32 md:py-40 px-4 bg-white">
-      <div className="max-w-[1400px] mx-auto">
-        <motion.p
-          className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#E5B765] mb-4"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-        >
-          Contacto
-        </motion.p>
+    <section
+      id="contacto"
+      className="bg-cream text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+    >
+      <div className="max-w-[1100px] mx-auto">
+        <div className="text-center mb-20 md:mb-28">
+          <motion.p
+            className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-light"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+          >
+            Contacto
+          </motion.p>
 
-        <motion.h2
-          className="text-4xl md:text-5xl lg:text-6xl text-[#1A1A33] font-bold tracking-wide leading-tight mb-6"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
-        >
-          Conversemos
-        </motion.h2>
+          <motion.h2
+            className="text-3xl md:text-4xl lg:text-[2.75rem] font-light tracking-[0.02em] leading-[1.25] max-w-[28ch] mx-auto"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
+          >
+            <strong className="font-bold">Conversemos</strong>.
+          </motion.h2>
 
-        <motion.p
-          className="text-lg md:text-xl text-[#4A4A5A] max-w-[68ch] leading-relaxed mb-16 font-light"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
-        >
-          Para consultas sobre participación, oportunidades de patrocinio o
-          información de próximas ediciones de The AI Insight Circle.
-        </motion.p>
+          <motion.p
+            className="mt-12 text-base md:text-lg leading-[1.7] font-light max-w-[58ch] mx-auto text-[color:var(--ink-warm)]/75"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
+          >
+            Para consultas sobre participación, oportunidades de patrocinio o
+            información de próximas ediciones de The AI Insight Circle.
+          </motion.p>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
-          {/* Left column — Contact info */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 border-t border-[color:var(--ink-warm)]/15 pt-14 md:pt-16">
+          {/* Left — datos de contacto */}
           <motion.div
+            className="lg:col-span-5"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.15 }}
+            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
           >
-            <div className="space-y-8">
-              <a
-                href="mailto:info@insight-circle.ai"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-[#1A1A33]/5 border border-[#1A1A33]/10 flex items-center justify-center group-hover:bg-[#E5B765]/10 group-hover:border-[#E5B765]/20 transition-all duration-300">
-                  <EnvelopeSimple
-                    weight="light"
-                    size={22}
-                    className="text-[#1A1A33]/60 group-hover:text-[#E5B765] transition-colors duration-300"
-                  />
-                </div>
-                <div>
-                  <p className="text-xs text-[#4A4A5A] uppercase tracking-wider">
-                    Email
-                  </p>
-                  <p className="text-lg md:text-xl text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
-                    info@insight-circle.ai
-                  </p>
-                </div>
-              </a>
-
-              <a
-                href="#"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-[#1A1A33]/5 border border-[#1A1A33]/10 flex items-center justify-center group-hover:bg-[#E5B765]/10 group-hover:border-[#E5B765]/20 transition-all duration-300">
-                  <WhatsappLogo
-                    weight="light"
-                    size={22}
-                    className="text-[#1A1A33]/60 group-hover:text-[#E5B765] transition-colors duration-300"
-                  />
-                </div>
-                <div>
-                  <p className="text-xs text-[#4A4A5A] uppercase tracking-wider">
-                    WhatsApp
-                  </p>
-                  <p className="text-lg md:text-xl text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
-                    Enlace directo
-                  </p>
-                </div>
-              </a>
-
-              <a
-                href="#"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-[#1A1A33]/5 border border-[#1A1A33]/10 flex items-center justify-center group-hover:bg-[#E5B765]/10 group-hover:border-[#E5B765]/20 transition-all duration-300">
-                  <LinkedinLogo
-                    weight="light"
-                    size={22}
-                    className="text-[#1A1A33]/60 group-hover:text-[#E5B765] transition-colors duration-300"
-                  />
-                </div>
-                <div>
-                  <p className="text-xs text-[#4A4A5A] uppercase tracking-wider">
-                    LinkedIn
-                  </p>
-                  <p className="text-lg md:text-xl text-[#1A1A33] group-hover:text-[#E5B765] transition-colors duration-300">
-                    The AI Insight Circle
-                  </p>
-                </div>
-              </a>
-            </div>
+            <p className="text-[10px] uppercase tracking-[0.28em] text-gold mb-8 font-light">
+              Canales directos
+            </p>
+            <ul className="space-y-7">
+              {[
+                {
+                  Icon: EnvelopeSimple,
+                  label: "Email",
+                  value: "bernardita@insightcircle.cl",
+                  href: "mailto:bernardita@insightcircle.cl",
+                },
+                {
+                  Icon: WhatsappLogo,
+                  label: "WhatsApp",
+                  value: "+56 9 9318 8836",
+                  href: "https://wa.me/56993188836",
+                },
+                {
+                  Icon: LinkedinLogo,
+                  label: "LinkedIn",
+                  value: "The AI Insight Circle",
+                  href: "#",
+                },
+              ].map(({ Icon, label, value, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    className="group flex items-baseline gap-6 border-b border-[color:var(--ink-warm)]/10 pb-5 hover:border-gold/60 transition-colors duration-500"
+                  >
+                    <Icon
+                      weight="light"
+                      size={18}
+                      className="text-[color:var(--ink-warm)]/55 group-hover:text-gold transition-colors duration-500 shrink-0 self-center"
+                    />
+                    <div className="flex-1">
+                      <p className="text-[10px] uppercase tracking-[0.28em] text-[color:var(--ink-warm)]/45 font-light mb-1">
+                        {label}
+                      </p>
+                      <p className="text-base md:text-lg font-light tracking-[0.01em] group-hover:text-gold transition-colors duration-500">
+                        {value}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </motion.div>
 
-          {/* Right column — Form */}
+          {/* Right — Form */}
           <motion.div
+            className="lg:col-span-7"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
           >
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-16">
-                <div className="w-16 h-16 rounded-full bg-[#E5B765]/10 border border-[#E5B765]/20 flex items-center justify-center mb-6">
-                  <CheckCircle weight="light" size={32} color="#E5B765" />
-                </div>
-                <h3 className="text-2xl md:text-3xl text-[#1A1A33] font-bold">
-                  Gracias por tu mensaje
+                <CheckCircle weight="light" size={36} className="text-gold mb-6" />
+                <h3 className="text-2xl md:text-3xl font-light tracking-[0.01em]">
+                  Gracias por <strong className="font-bold">tu mensaje</strong>.
                 </h3>
-                <p className="text-base text-[#4A4A5A] mt-3 max-w-[40ch] text-center">
+                <p className="text-base text-[color:var(--ink-warm)]/65 mt-3 max-w-[40ch] text-center font-light">
                   Nos pondremos en contacto contigo pronto.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                   <label htmlFor="contacto-nombre" className={labelClasses}>
                     Nombre completo
@@ -230,7 +216,7 @@ export default function Contacto() {
                     className={inputClasses}
                   />
                   {errors.nombre && (
-                    <p className="text-red-500/80 text-xs mt-1.5">
+                    <p className="text-red-500/80 text-xs mt-2 tracking-wide">
                       {errors.nombre}
                     </p>
                   )}
@@ -280,7 +266,7 @@ export default function Contacto() {
                     className={inputClasses}
                   />
                   {errors.email && (
-                    <p className="text-red-500/80 text-xs mt-1.5">
+                    <p className="text-red-500/80 text-xs mt-2 tracking-wide">
                       {errors.email}
                     </p>
                   )}
@@ -295,7 +281,7 @@ export default function Contacto() {
                     name="motivo"
                     value={formData.motivo}
                     onChange={handleChange}
-                    className={inputClasses}
+                    className={`${inputClasses} appearance-none cursor-pointer`}
                   >
                     <option value="" disabled>
                       Selecciona un motivo
@@ -306,23 +292,22 @@ export default function Contacto() {
                     <option value="Otro">Otro</option>
                   </select>
                   {errors.motivo && (
-                    <p className="text-red-500/80 text-xs mt-1.5">
+                    <p className="text-red-500/80 text-xs mt-2 tracking-wide">
                       {errors.motivo}
                     </p>
                   )}
                 </div>
 
-                <button
-                  type="submit"
-                  className="group w-full bg-[#E5B765] text-[#1A1A33] font-semibold rounded-full py-4 text-base hover:bg-[#F0C878] active:scale-[0.98] transition-all duration-300 mt-2 flex items-center justify-center gap-3"
-                >
-                  Enviar
-                  <PaperPlaneTilt
-                    weight="bold"
-                    size={18}
-                    className="group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-300"
-                  />
-                </button>
+                <div className="pt-6">
+                  <button
+                    type="submit"
+                    className="group inline-flex flex-col items-start gap-3"
+                  >
+                    <span className="text-base md:text-lg tracking-[0.18em] uppercase font-light pb-2 border-b border-[color:var(--ink-warm)]/40 group-hover:border-gold group-hover:text-gold transition-colors duration-500">
+                      Enviar mensaje
+                    </span>
+                  </button>
+                </div>
               </form>
             )}
           </motion.div>

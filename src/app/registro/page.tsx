@@ -112,10 +112,10 @@ export default function RegistroPage() {
             Solicitud de Invitación
           </p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-4">
-            Solicitar Invitación
+            Solicite su invitación
           </h1>
           <p className="text-base text-[#8A8680] max-w-[55ch] mb-12 leading-relaxed">
-            Completa el siguiente formulario para solicitar tu invitación al
+            Complete el siguiente formulario para solicitar su invitación al
             próximo encuentro de The AI Insight Circle. El acceso es por
             invitación y está sujeto a evaluación.
           </p>

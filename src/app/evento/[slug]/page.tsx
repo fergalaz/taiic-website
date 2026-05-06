@@ -83,7 +83,7 @@ export default function EventoPage() {
             href="/registro"
             className="inline-flex items-center gap-3 bg-[#E5B765] text-[#1A1A33] font-semibold rounded-full px-8 py-4 text-base hover:bg-[#F0C878] active:scale-[0.98] transition-all duration-300"
           >
-            Solicitar Invitación
+            Solicite su invitación
           </a>
         </div>
       </div>
