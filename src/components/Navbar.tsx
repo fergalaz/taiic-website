@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { List, X } from "@phosphor-icons/react";
+import Logo from "./Logo";
 
 const navLinks = [
   { label: "Experiencia", href: "#experiencia" },
@@ -40,13 +41,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Sobre el hero: navbar transparente + texto blanco.
-  // A partir del scroll: barra crema con backdrop blur + texto en ink-warm.
+  // Sobre el hero: navbar transparente sin logo (el hero ya muestra el isotipo grande).
+  // Después del hero: barra crema con el isotipo brandbook + texto en ink-warm.
   const headerBg = scrolled
-    ? "bg-[color:var(--cream)]/90 backdrop-blur-xl border-b border-[color:var(--ink-warm)]/8"
+    ? "bg-[color:var(--cream)]/92 backdrop-blur-xl border-b border-[color:var(--ink-warm)]/8"
     : "bg-transparent";
   const textColor = scrolled ? "text-[color:var(--ink-warm)]" : "text-white";
-  const strokeColor = scrolled ? "var(--ink-warm)" : "#FFFFFF";
 
   return (
     <>
@@ -54,48 +54,27 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-500 ${headerBg}`}
       >
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-5 flex items-center justify-between">
+          {/* Logo solo aparece después de salir del hero */}
           <a
             href="#"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex items-center gap-3 group"
+            className={`flex items-center gap-3 group transition-opacity duration-500 ${
+              scrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            aria-hidden={!scrolled}
+            tabIndex={scrolled ? 0 : -1}
           >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 36 36"
-              fill="none"
-              className="shrink-0 transition-colors duration-500"
-            >
-              <circle
-                cx="18"
-                cy="18"
-                r="17"
-                stroke="var(--gold)"
-                strokeWidth="1.2"
-              />
-              <text
-                x="18"
-                y="20"
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fill="var(--gold)"
-                fontSize="11"
-                fontWeight="700"
-                fontFamily="'Gilroy', 'Inter', sans-serif"
-                letterSpacing="0.05em"
-              >
-                AI
-              </text>
-            </svg>
-            <span
-              className={`text-[10px] uppercase tracking-[0.22em] font-light hidden sm:block transition-colors duration-500 ${textColor}`}
-            >
+            <Logo variant="dark" size={32} />
+            <span className="text-[10px] uppercase tracking-[0.22em] font-light hidden sm:block text-[color:var(--ink-warm)]">
               The AI Insight Circle
             </span>
           </a>
+
+          {/* Si no hay scroll, ocupamos el espacio izquierdo con un placeholder */}
+          {!scrolled && <span aria-hidden className="w-px h-px" />}
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -108,8 +87,6 @@ export default function Navbar() {
             ) : (
               <List size={22} weight="light" />
             )}
-            {/* Stroke color hint para SVG sin clases */}
-            <span className="hidden" data-stroke={strokeColor} />
           </button>
         </div>
       </header>

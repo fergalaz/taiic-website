@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUp, LinkedinLogo } from "@phosphor-icons/react";
+import Logo from "./Logo";
 
 const navLinks = [
   { label: "Experiencia", href: "#experiencia" },
@@ -17,36 +18,9 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 gold-separator" />
 
       <div className="max-w-[1400px] mx-auto">
-        {/* Logo centered — bigger */}
-        <div className="flex flex-col items-center mb-14">
-          <svg
-            width="80"
-            height="80"
-            viewBox="0 0 36 36"
-            fill="none"
-            className="mb-5"
-          >
-            <circle
-              cx="18"
-              cy="18"
-              r="17"
-              stroke="#E5B765"
-              strokeWidth="1.5"
-            />
-            <text
-              x="18"
-              y="20"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill="#E5B765"
-              fontSize="11"
-              fontWeight="700"
-              fontFamily="'Gilroy', 'Montserrat', sans-serif"
-              letterSpacing="0.05em"
-            >
-              AI
-            </text>
-          </svg>
+        {/* Logo centered — original brandbook isotipo */}
+        <div className="flex flex-col items-center mb-14 gap-5">
+          <Logo variant="light" size={80} />
           <span className="text-sm md:text-base uppercase tracking-[0.2em] text-text-primary font-medium">
             The AI Insight Circle
           </span>

@@ -5,19 +5,16 @@ import Spread from "./Spread";
 
 const standards = [
   {
-    numero: "01",
     titulo: "Investigación revisada por pares",
     detalle:
       "Cada speaker proviene de instituciones donde el rigor académico es condición de entrada, no resultado.",
   },
   {
-    numero: "02",
     titulo: "Implementación comprobada o autoridad estratégica",
     detalle:
       "Hablamos de IA aplicada — no de promesas. Track record verificable o liderazgo institucional reconocido.",
   },
   {
-    numero: "03",
     titulo: "Sin ruido comercial",
     detalle:
       "Cero pitch, cero patrocinios disfrazados de contenido. Solo análisis con incentivos alineados al asistente.",
@@ -31,20 +28,24 @@ const fadeUp = {
 
 export default function ExpertStandard() {
   return (
-    <section id="expert-standard" className="bg-paper text-[color:var(--ink-warm)]">
-      {/* Spread editorial 04 — manos sobre documento + lámpara dorada */}
+    <section
+      id="expert-standard"
+      className="bg-paper text-[color:var(--ink-warm)]"
+    >
+      {/* Spread editorial 04 — manos sobre documento. Grayscale para tono editorial conceptual. */}
       <Spread
         src="/imagery/04-expert-standard.jpg"
         alt="Manos sobre documento iluminado por lámpara dorada en sala de directorio"
         ratio="cinemascope"
         caption="Expert standard"
+        grayscale
       />
 
-      <div className="px-6 md:px-10 py-28 md:py-40">
+      <div className="px-6 md:px-10 py-32 md:py-44">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center mb-20 md:mb-28">
+          <div className="text-center mb-24 md:mb-32">
             <motion.p
-              className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-light"
+              className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-7 font-light"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -55,7 +56,7 @@ export default function ExpertStandard() {
             </motion.p>
 
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-[2.75rem] font-light tracking-[0.02em] leading-[1.25] max-w-[28ch] mx-auto"
+              className="text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-light tracking-[0.02em] leading-[1.2] max-w-[28ch] mx-auto"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -82,13 +83,10 @@ export default function ExpertStandard() {
                   delay: 0.1 + index * 0.08,
                 }}
               >
-                <span className="text-gold text-[11px] tracking-[0.22em] font-light">
-                  {s.numero}
-                </span>
-                <h3 className="text-xl md:text-2xl font-light tracking-[0.01em] leading-[1.3]">
+                <h3 className="text-xl md:text-2xl lg:text-[1.65rem] font-light tracking-[0.01em] leading-[1.3]">
                   {s.titulo}
                 </h3>
-                <p className="text-sm md:text-base text-[color:var(--ink-warm)]/65 leading-[1.7] font-light">
+                <p className="text-base md:text-lg text-[color:var(--ink-warm)]/65 leading-[1.7] font-light">
                   {s.detalle}
                 </p>
               </motion.div>

@@ -1,29 +1,45 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown } from "@phosphor-icons/react";
+import Logo from "./Logo";
 
 interface HeroProps {
-  /** Conservado por compatibilidad — el rediseño usa --gradient-hero del brandbook. */
+  /** Imagen de fondo (full-bleed). Default: silueta + skyline. */
   heroImage?: string;
   objectPosition?: string;
 }
 
-export default function Hero({}: HeroProps) {
+export default function Hero({
+  heroImage = "/imagery/01-hero-spread.jpg",
+  objectPosition = "center",
+}: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
-      style={{ background: "var(--gradient-hero)" }}
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-ink"
     >
-      {/* Vignette top + bottom — sutiliza la transición */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0.45) 0%, transparent 22%, transparent 70%, rgba(0,0,0,0.55) 100%)",
-        }}
-      />
+      {/* Background photo — silueta + skyline */}
+      <div className="absolute inset-0">
+        <Image
+          src={heroImage}
+          alt="Sala privada con vista al skyline al atardecer"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectPosition }}
+          className="object-cover"
+        />
+        {/* Editorial overlay — oscurece levemente el centro para legibilidad del título */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 30%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.7) 100%)",
+          }}
+        />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 text-center">
@@ -31,65 +47,37 @@ export default function Hero({}: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.32, 0.72, 0, 1] }}
+          className="flex flex-col items-center"
         >
-          {/* Eyebrow */}
-          <p className="text-[10px] md:text-[11px] uppercase text-gold tracking-[0.4em] mb-10 md:mb-14 font-light">
-            Edición 2026 — Latin America
-          </p>
+          {/* Isotipo brandbook — original */}
+          <Logo variant="light" size={84} className="mb-12 md:mb-16" />
 
           {/* Display title — mezcla regular + bold del brandbook */}
-          <h1 className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light uppercase text-white leading-[1.05] tracking-[0.18em]">
+          <h1 className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[6.25rem] font-light uppercase text-white leading-[1.04] tracking-[0.16em] md:tracking-[0.18em]">
             The AI <strong className="font-bold text-gold">Insight</strong> Circle
           </h1>
 
           {/* Tagline */}
-          <p className="text-base md:text-xl text-white/85 mt-12 md:mt-16 font-light tracking-wide max-w-[44ch] mx-auto">
+          <p className="text-lg md:text-2xl text-white/90 mt-12 md:mt-16 font-light tracking-wide max-w-[44ch]">
             Debida diligencia en inteligencia artificial
             <br className="hidden md:block" /> para la alta dirección.
           </p>
-
-          {/* Hairline + criterios */}
-          <div className="mt-14 md:mt-20 flex flex-col items-center gap-6">
-            <div className="h-px w-16 bg-gold/60" />
-            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-white/55 font-light flex flex-wrap items-center justify-center gap-x-5 gap-y-3 max-w-[70ch]">
-              <span>40–60 participantes seleccionados</span>
-              <span className="text-gold/50">·</span>
-              <span>Análisis profundos por sector</span>
-              <span className="text-gold/50">·</span>
-              <span>Formato Chatham House</span>
-            </p>
-          </div>
-
-          {/* CTA editorial — tipográfico, no pill */}
-          <div className="mt-16 md:mt-20">
-            <a
-              href="/registro"
-              className="group inline-flex flex-col items-center gap-3"
-            >
-              <span className="text-base md:text-lg text-white tracking-[0.18em] uppercase font-light pb-2 border-b border-gold/70 group-hover:border-gold group-hover:text-gold transition-colors duration-500">
-                Solicite su invitación
-              </span>
-            </a>
-          </div>
         </motion.div>
       </div>
 
-      {/* Próximos eventos — anclado abajo, susurrado */}
+      {/* Scroll cue — minimal */}
       <a
-        href="#proximo-evento"
-        className="absolute bottom-10 md:bottom-14 left-1/2 -translate-x-1/2 z-10 group flex flex-col items-center gap-3 text-white/70 hover:text-gold transition-colors duration-500"
+        href="#experiencia"
+        className="absolute bottom-10 md:bottom-14 left-1/2 -translate-x-1/2 z-10 group flex flex-col items-center gap-3 text-white/65 hover:text-gold transition-colors duration-500"
+        aria-label="Ver experiencia"
       >
-        <span className="text-[10px] uppercase tracking-[0.32em] text-white/45 font-light">
-          Próximas experiencias
+        <span className="text-[10px] uppercase tracking-[0.32em] font-light">
+          Continuar
         </span>
-        <div className="text-[12px] md:text-sm font-light tracking-wide flex flex-col items-center gap-1">
-          <span>Bogotá · Martes 28 de Julio</span>
-          <span>Ciudad de Panamá · Jueves 30 de Julio</span>
-        </div>
         <ArrowDown
           size={16}
           weight="light"
-          className="text-gold/80 mt-2 group-hover:translate-y-1 transition-transform duration-500"
+          className="text-gold/80 group-hover:translate-y-1 transition-transform duration-500"
         />
       </a>
     </section>

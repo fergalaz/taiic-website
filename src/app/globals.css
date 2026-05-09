@@ -10,8 +10,8 @@
   --ink-warm: #1A1A33;       /* negro cálido brandbook (rgb 26/26/51) */
   --ink-soft: #1A1A1A;       /* gold scale step */
   --paper: #FFFFFF;
-  --cream: #F5EFD7;          /* gold-20 — fondo crema editorial */
-  --cream-soft: #F1E7C3;     /* gold-30 */
+  --cream: #FBF9F2;          /* off-white tibio — más blanco, mínima calidez (rev3 cliente) */
+  --cream-soft: #F4EEDB;     /* tono crema reservado para realces puntuales */
   --gold: #D3AF37;           /* dorado principal */
   --gold-warm: #DBBE5F;      /* gold-80 — hover */
   --gold-pale: #E3CD87;      /* gold-60 — accents */

@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <Hero heroImage="/hero/nido_luminoso.webp" />
+        <Hero />
         <Experiencia />
         <Contenidos />
         <FirstClosedDoor />
