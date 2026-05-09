@@ -52,9 +52,9 @@ export default function Hero({
           {/* Isotipo brandbook — original */}
           <Logo variant="light" size={84} className="mb-12 md:mb-16" />
 
-          {/* Display title — mezcla regular + bold del brandbook */}
+          {/* Display title — "AI" en dorado según brandbook lámina 22 */}
           <h1 className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[6.25rem] font-light uppercase text-white leading-[1.04] tracking-[0.16em] md:tracking-[0.18em]">
-            The AI <strong className="font-bold text-gold">Insight</strong> Circle
+            The <strong className="font-bold text-gold">AI</strong> Insight Circle
           </h1>
 
           {/* Tagline */}
