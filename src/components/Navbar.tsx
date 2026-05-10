@@ -98,7 +98,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-[color:var(--ink-warm)]/95 backdrop-blur-3xl flex items-center justify-center"
+            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-3xl flex items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-8">
               {navLinks.map((link, i) => (

@@ -13,7 +13,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#141428] pt-24 pb-10 px-4 relative">
+    <footer className="bg-ink pt-24 pb-10 px-4 relative">
       {/* Gold line separator at top */}
       <div className="absolute top-0 left-0 right-0 gold-separator" />
 

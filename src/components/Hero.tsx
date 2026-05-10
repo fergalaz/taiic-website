@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown } from "@phosphor-icons/react";
-import Logo from "./Logo";
 
 interface HeroProps {
   /** Imagen de fondo (full-bleed). Default: silueta + skyline. */
@@ -18,7 +17,7 @@ export default function Hero({
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-ink"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-black"
     >
       {/* Background photo — silueta + skyline */}
       <div className="absolute inset-0">
@@ -49,16 +48,20 @@ export default function Hero({
           transition={{ duration: 1.2, ease: [0.32, 0.72, 0, 1] }}
           className="flex flex-col items-center"
         >
-          {/* Isotipo brandbook — original */}
-          <Logo variant="light" size={84} className="mb-12 md:mb-16" />
-
-          {/* Display title — "AI" en dorado según brandbook lámina 22 */}
-          <h1 className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[6.25rem] font-light uppercase text-white leading-[1.04] tracking-[0.16em] md:tracking-[0.18em]">
-            The <strong className="font-bold text-gold">AI</strong> Insight Circle
-          </h1>
+          {/* Lockup vertical brandbook — isotipo + wordmark (rev3 cliente) */}
+          <h1 className="sr-only">The AI Insight Circle</h1>
+          <Image
+            src="/brand/taiic-lockup-vertical.png"
+            alt="The AI Insight Circle"
+            width={1813}
+            height={892}
+            priority
+            sizes="(min-width: 1024px) 720px, (min-width: 768px) 600px, 86vw"
+            className="w-[86vw] max-w-[720px] h-auto"
+          />
 
           {/* Tagline */}
-          <p className="text-lg md:text-2xl text-white/90 mt-12 md:mt-16 font-light tracking-wide max-w-[44ch]">
+          <p className="text-lg md:text-2xl text-white/90 mt-14 md:mt-20 font-light tracking-wide max-w-[44ch]">
             Debida diligencia en inteligencia artificial
             <br className="hidden md:block" /> para la alta dirección.
           </p>
