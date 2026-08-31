@@ -2,13 +2,14 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Experiencia from "@/components/Experiencia";
 import Contenidos from "@/components/Contenidos";
-import FirstClosedDoor from "@/components/FirstClosedDoor";
 import ForWhom from "@/components/ForWhom";
 import ExpertStandard from "@/components/ExpertStandard";
-import ProximoEvento from "@/components/ProximoEvento";
 import SobreNosotros from "@/components/SobreNosotros";
+import Magnitude from "@/components/Magnitude";
+import Leadership from "@/components/Leadership";
 import Contacto from "@/components/Contacto";
 import Footer from "@/components/Footer";
+import Spread from "@/components/Spread";
 
 export default function Home() {
   return (
@@ -17,12 +18,26 @@ export default function Home() {
       <main>
         <Hero />
         <Experiencia />
+        {/* Spread editorial — ventana circular (preview iStock 1196259255, agosto 2026) */}
+        <Spread
+          src="/imagery/05-circle-sunset-PREVIEW.jpg"
+          alt="Silueta contemplando el atardecer a través de una ventana circular"
+          ratio="cinemascope"
+          grayscale
+        />
         <Contenidos />
-        <FirstClosedDoor />
         <ForWhom />
         <ExpertStandard />
-        <ProximoEvento />
+        {/* Spread editorial — networking (preview iStock 1633281467, agosto 2026) */}
+        <Spread
+          src="/imagery/09-networking-cocktail-PREVIEW.jpg"
+          alt="Ejecutivos conversando durante un cóctel de networking"
+          ratio="cinemascope"
+          grayscale
+        />
         <SobreNosotros />
+        <Magnitude />
+        <Leadership />
         <Contacto />
       </main>
       <Footer />

@@ -32,10 +32,10 @@ export default function ExpertStandard() {
       id="expert-standard"
       className="bg-paper text-[color:var(--ink-warm)]"
     >
-      {/* Spread editorial 04 — manos sobre documento. Grayscale para tono editorial conceptual. */}
+      {/* Spread editorial — panel de speakers (preview iStock 1757744098, agosto 2026). */}
       <Spread
-        src="/imagery/04-expert-standard.jpg"
-        alt="Manos sobre documento iluminado por lámpara dorada en sala de directorio"
+        src="/imagery/06-speakers-panel-PREVIEW.jpg"
+        alt="Panel de speakers conversando en el escenario de una conferencia"
         ratio="cinemascope"
         caption="Expert standard"
         grayscale

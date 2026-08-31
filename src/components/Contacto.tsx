@@ -141,8 +141,8 @@ export default function Contacto() {
                 {
                   Icon: EnvelopeSimple,
                   label: "Email",
-                  value: "bernardita@insightcircle.cl",
-                  href: "mailto:bernardita@insightcircle.cl",
+                  value: "info@insight-circle.ai",
+                  href: "mailto:info@insight-circle.ai",
                 },
                 {
                   Icon: WhatsappLogo,
@@ -301,11 +301,9 @@ export default function Contacto() {
                 <div className="pt-6">
                   <button
                     type="submit"
-                    className="group inline-flex flex-col items-start gap-3"
+                    className="inline-flex items-center justify-center bg-gold text-[color:var(--ink-warm)] px-12 py-4 text-sm md:text-base tracking-[0.18em] uppercase font-medium hover:brightness-110 transition-all duration-500"
                   >
-                    <span className="text-base md:text-lg tracking-[0.18em] uppercase font-light pb-2 border-b border-[color:var(--ink-warm)]/40 group-hover:border-gold group-hover:text-gold transition-colors duration-500">
-                      Enviar mensaje
-                    </span>
+                    Enviar
                   </button>
                 </div>
               </form>

@@ -105,7 +105,7 @@ export default function Experiencia() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
           >
-            Una tesis
+            The AI Insight Circle Experience
           </motion.p>
 
           <motion.h2

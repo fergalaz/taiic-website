@@ -6,8 +6,8 @@ import Logo from "./Logo";
 const navLinks = [
   { label: "Experiencia", href: "#experiencia" },
   { label: "Sectores", href: "#contenidos" },
-  { label: "Próximas Experiencias", href: "#proximo-evento" },
   { label: "Sobre", href: "#sobre-nosotros" },
+  { label: "MagNitude", href: "#magnitude" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -39,28 +39,10 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Partner logos / text */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-14">
-          {/* MAGnitude Advisory */}
+        {/* Partner — BOI Events */}
+        <div className="flex items-center justify-center mb-14">
           <div className="flex items-center gap-4 text-text-primary/70">
-            <div className="w-12 h-12 rounded-md border border-accent/30 bg-accent/5 flex items-center justify-center text-[10px] font-mono uppercase tracking-wider text-accent/60">
-              Logo
-            </div>
-            <p className="text-sm md:text-base font-light tracking-wide">
-              Una iniciativa del ecosistema
-              <br className="hidden md:block" />
-              <span className="font-medium text-text-primary">
-                MAGnitude Advisory
-              </span>
-            </p>
-          </div>
-
-          <span className="hidden md:block text-text-secondary/30 text-2xl">
-            |
-          </span>
-
-          {/* BOI Events */}
-          <div className="flex items-center gap-4 text-text-primary/70">
+            {/* Logo placeholder — reemplazar por logo oficial BOI Events */}
             <div className="w-12 h-12 rounded-md border border-accent/30 bg-accent/5 flex items-center justify-center text-[10px] font-mono uppercase tracking-wider text-accent/60">
               Logo
             </div>
@@ -82,14 +64,6 @@ export default function Footer() {
             aria-label="LinkedIn"
           >
             <LinkedinLogo weight="light" size={20} />
-          </a>
-          {/* Substack icon — text placeholder */}
-          <a
-            href="#"
-            className="w-11 h-11 rounded-full border border-white/[0.1] flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent/30 transition-all duration-300 text-xs font-bold"
-            aria-label="Substack"
-          >
-            S
           </a>
         </div>
 

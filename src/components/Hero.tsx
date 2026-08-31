@@ -40,8 +40,8 @@ export default function Hero({
         />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 text-center">
+      {/* Content — pb evita colisión con el scroll cue tras sumar la bajada agosto 2026 */}
+      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 pb-24 md:pb-28 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,6 +64,14 @@ export default function Hero({
           <p className="text-lg md:text-2xl text-white/90 mt-14 md:mt-20 font-light tracking-wide max-w-[44ch]">
             Debida diligencia en inteligencia artificial
             <br className="hidden md:block" /> para la alta dirección.
+          </p>
+
+          {/* Bajada — versión agosto 2026 */}
+          <p className="text-sm md:text-base text-white/70 mt-8 md:mt-10 font-light leading-[1.8] max-w-[62ch]">
+            Un círculo privado donde los principales tomadores de decisiones de
+            América Latina analizan el impacto real y medible de la IA en
+            sectores estratégicos — con expertos globales de primer nivel,
+            evidencia sectorial y sin ruido comercial.
           </p>
         </motion.div>
       </div>

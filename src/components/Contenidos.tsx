@@ -38,11 +38,6 @@ const sectores = [
     nombre: "Salud",
     detalle: "Diagnóstico asistido, eficiencia clínica y nuevos estándares regulatorios.",
   },
-  {
-    numero: "08",
-    nombre: "Sector público",
-    detalle: "Política regulatoria, datos y servicios al ciudadano basados en IA.",
-  },
 ];
 
 const fadeUp = {
@@ -77,7 +72,7 @@ export default function Contenidos() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
           >
-            Ocho sectores donde la IA{" "}
+            Siete sectores donde la IA{" "}
             <strong className="font-bold">ya está cambiando las reglas</strong>.
           </motion.h2>
 

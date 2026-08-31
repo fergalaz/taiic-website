@@ -37,10 +37,10 @@ export default function ForWhom() {
             <div className="relative w-full aspect-[3/4] max-h-[72vh] overflow-hidden bg-[color:var(--ink-warm)]/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/imagery/01-hero-spread.jpg"
-                alt="Sala privada con ejecutivos al atardecer"
+                src="/imagery/07-chess-queen-PREVIEW.jpg"
+                alt="Reina de ajedrez a contraluz sobre superficie reflectante"
                 className="w-full h-full object-cover grayscale"
-                style={{ objectPosition: "center 20%" }}
+                style={{ objectPosition: "center" }}
               />
               <div
                 aria-hidden

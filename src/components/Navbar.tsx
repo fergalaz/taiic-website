@@ -8,8 +8,8 @@ import Logo from "./Logo";
 const navLinks = [
   { label: "Experiencia", href: "#experiencia" },
   { label: "Sectores", href: "#contenidos" },
-  { label: "Próximas Experiencias", href: "#proximo-evento" },
   { label: "Sobre", href: "#sobre-nosotros" },
+  { label: "MagNitude", href: "#magnitude" },
   { label: "Contacto", href: "#contacto" },
   { label: "Solicite su invitación", href: "/registro", highlight: true },
 ];
