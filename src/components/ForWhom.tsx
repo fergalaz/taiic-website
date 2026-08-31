@@ -59,7 +59,7 @@ export default function ForWhom() {
           {/* Columna derecha — título + lista compacta */}
           <div className="lg:col-span-7">
             <motion.p
-              className="text-[11px] md:text-xs uppercase tracking-[0.4em] text-gold mb-7 font-light"
+              className="text-[11px] md:text-xs uppercase tracking-[0.4em] text-gold mb-7 font-bold"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -100,7 +100,7 @@ export default function ForWhom() {
                   }}
                 >
                   <div className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[4rem_1fr] gap-4 md:gap-6 items-baseline py-4 md:py-5">
-                    <span className="text-gold text-[11px] md:text-xs tracking-[0.22em] font-light">
+                    <span className="text-gold text-[11px] md:text-xs tracking-[0.22em] font-bold">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="text-lg md:text-xl lg:text-[1.4rem] font-light tracking-[0.01em] leading-[1.3]">

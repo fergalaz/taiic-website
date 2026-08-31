@@ -16,7 +16,7 @@ export default function SobreNosotros() {
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center">
           <motion.p
-            className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-light"
+            className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-bold"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"

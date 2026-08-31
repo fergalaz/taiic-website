@@ -89,7 +89,7 @@ export default function Contacto() {
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-20 md:mb-28">
           <motion.p
-            className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-light"
+            className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-bold"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -133,7 +133,7 @@ export default function Contacto() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
           >
-            <p className="text-[10px] uppercase tracking-[0.28em] text-gold mb-8 font-light">
+            <p className="text-[10px] uppercase tracking-[0.28em] text-gold mb-8 font-bold">
               Canales directos
             </p>
             <ul className="space-y-7">

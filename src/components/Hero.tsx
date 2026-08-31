@@ -17,7 +17,7 @@ export default function Hero({
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-[100dvh] flex items-end justify-center overflow-hidden bg-black"
     >
       {/* Background photo — silueta + skyline */}
       <div className="absolute inset-0">
@@ -30,18 +30,20 @@ export default function Hero({
           style={{ objectPosition }}
           className="object-cover"
         />
-        {/* Editorial overlay — oscurece levemente el centro para legibilidad del título */}
+        {/* Editorial overlay — parte alta despejada para ver la foto,
+            mitad inferior oscura para legibilidad del bloque de textos */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 30%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.7) 100%)",
+              "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.62) 62%, rgba(0,0,0,0.85) 100%)",
           }}
         />
       </div>
 
-      {/* Content — pb evita colisión con el scroll cue tras sumar la bajada agosto 2026 */}
-      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 pb-24 md:pb-28 text-center">
+      {/* Content anclado abajo (feedback cliente: aire arriba para ver la foto);
+          pb da espacio al scroll cue */}
+      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 pb-28 md:pb-32 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,18 +58,18 @@ export default function Hero({
             width={1813}
             height={892}
             priority
-            sizes="(min-width: 1024px) 720px, (min-width: 768px) 600px, 86vw"
-            className="w-[86vw] max-w-[720px] h-auto"
+            sizes="(min-width: 1024px) 600px, (min-width: 768px) 520px, 74vw"
+            className="w-[74vw] max-w-[600px] h-auto"
           />
 
           {/* Tagline */}
-          <p className="text-lg md:text-2xl text-white/90 mt-14 md:mt-20 font-light tracking-wide max-w-[44ch]">
+          <p className="text-lg md:text-2xl text-white/90 mt-10 md:mt-12 font-light tracking-wide max-w-[44ch]">
             Debida diligencia en inteligencia artificial
             <br className="hidden md:block" /> para la alta dirección.
           </p>
 
           {/* Bajada — versión agosto 2026 */}
-          <p className="text-sm md:text-base text-white/70 mt-8 md:mt-10 font-light leading-[1.8] max-w-[62ch]">
+          <p className="text-sm md:text-base text-white/70 mt-6 md:mt-8 font-light leading-[1.8] max-w-[62ch]">
             Un círculo privado donde los principales tomadores de decisiones de
             América Latina analizan el impacto real y medible de la IA en
             sectores estratégicos — con expertos globales de primer nivel,

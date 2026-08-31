@@ -54,7 +54,7 @@ export default function Contenidos() {
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-24 md:mb-32">
           <motion.p
-            className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-7 font-light"
+            className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-7 font-bold"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -105,7 +105,7 @@ export default function Contenidos() {
               }}
             >
               <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[4.5rem_1fr] gap-5 md:gap-7 items-baseline py-9 md:py-10">
-                <span className="text-gold text-xs md:text-sm tracking-[0.22em] font-light">
+                <span className="text-gold text-xs md:text-sm tracking-[0.22em] font-bold">
                   {sector.numero}
                 </span>
                 <div className="flex flex-col gap-2 md:gap-3">

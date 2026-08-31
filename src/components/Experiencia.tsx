@@ -71,7 +71,7 @@ export default function Experiencia() {
                   delay: index * 0.05,
                 }}
               >
-                <span className="text-xs md:text-sm uppercase tracking-[0.32em] text-gold font-light">
+                <span className="text-xs md:text-sm uppercase tracking-[0.32em] text-gold font-bold">
                   {c.eyebrow}
                 </span>
                 <span className="text-lg md:text-xl font-light tracking-[0.01em] leading-[1.4]">
@@ -131,7 +131,7 @@ export default function Experiencia() {
         <div className="px-6 md:px-10 py-32 md:py-44">
           <div className="max-w-[1200px] mx-auto">
             <motion.p
-              className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-7 font-light text-center"
+              className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-7 font-bold text-center"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -170,7 +170,7 @@ export default function Experiencia() {
                   }}
                 >
                   <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[5rem_4rem_1fr] gap-5 md:gap-8 items-center md:items-start py-9 md:py-11">
-                    <span className="text-gold text-xs md:text-sm tracking-[0.22em] font-light pt-1">
+                    <span className="text-gold text-xs md:text-sm tracking-[0.22em] font-bold pt-1">
                       {item.numero}
                     </span>
                     <span className="hidden md:flex md:pt-1 text-[color:var(--ink-warm)]/70">

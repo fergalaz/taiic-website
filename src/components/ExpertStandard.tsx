@@ -45,7 +45,7 @@ export default function ExpertStandard() {
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-24 md:mb-32">
             <motion.p
-              className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-7 font-light"
+              className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-7 font-bold"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"

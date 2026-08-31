@@ -61,7 +61,7 @@ export default function Magnitude() {
             </motion.div>
 
             <motion.p
-              className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-12 font-light"
+              className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-12 font-bold"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -151,7 +151,7 @@ export default function Magnitude() {
                     }}
                   >
                     <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[4.5rem_1fr] gap-5 md:gap-7 items-baseline py-8 md:py-9">
-                      <span className="text-gold text-xs md:text-sm tracking-[0.22em] font-light">
+                      <span className="text-gold text-xs md:text-sm tracking-[0.22em] font-bold">
                         {servicio.numero}
                       </span>
                       <div className="flex flex-col gap-2 md:gap-3">

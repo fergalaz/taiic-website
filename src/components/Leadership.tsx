@@ -29,7 +29,7 @@ export default function Leadership() {
       className="bg-cream text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
     >
       <div className="max-w-[1100px] mx-auto">
-        <p className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-12 font-light text-center">
+        <p className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-12 font-bold text-center">
           Leadership / Curatorship
         </p>
 
@@ -69,7 +69,7 @@ export default function Leadership() {
                     )
                   )}
                 </h3>
-                <p className="text-sm md:text-base text-gold tracking-[0.05em] uppercase font-light">
+                <p className="text-sm md:text-base text-gold tracking-[0.05em] uppercase font-bold">
                   {miembro.rol}
                 </p>
                 <p className="text-base md:text-[17px] leading-[1.7] font-light text-[color:var(--ink-warm)]/80 max-w-[60ch]">
