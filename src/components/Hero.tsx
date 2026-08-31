@@ -11,8 +11,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  heroImage = "/imagery/12-hero-sphere-PREVIEW.jpg",
-  objectPosition = "center",
+  heroImage = "/imagery/13-hero-sphere-ext-PREVIEW.jpg",
+  objectPosition = "center top",
 }: HeroProps) {
   return (
     <section
@@ -58,8 +58,8 @@ export default function Hero({
             width={1813}
             height={892}
             priority
-            sizes="(min-width: 1024px) 600px, (min-width: 768px) 520px, 74vw"
-            className="w-[74vw] max-w-[600px] h-auto"
+            sizes="(min-width: 1024px) 480px, (min-width: 768px) 440px, 64vw"
+            className="w-[64vw] max-w-[480px] h-auto"
           />
 
           {/* Tagline */}
