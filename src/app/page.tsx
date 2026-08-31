@@ -28,11 +28,13 @@ export default function Home() {
         <Contenidos />
         <ForWhom />
         <ExpertStandard />
-        {/* Spread editorial — networking (preview iStock 1633281467, agosto 2026) */}
+        {/* Spread editorial — networking (preview iStock 1633281467, agosto 2026).
+            objectPosition alto para no cortar las cabezas en el crop cinemascope. */}
         <Spread
           src="/imagery/09-networking-cocktail-PREVIEW.jpg"
           alt="Ejecutivos conversando durante un cóctel de networking"
           ratio="cinemascope"
+          objectPosition="center 22%"
           grayscale
         />
         <SobreNosotros />

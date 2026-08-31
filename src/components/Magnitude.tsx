@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const servicios = [
@@ -40,17 +41,24 @@ export default function Magnitude() {
       <div className="px-6 md:px-10 py-32 md:py-44">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-20 md:mb-28">
-            {/* Wordmark placeholder — reemplazar por logo oficial MagNitude cuando esté disponible */}
-            <motion.p
-              className="text-2xl md:text-3xl tracking-[0.24em] uppercase font-light mb-8"
+            {/* Logo oficial MagNitude (versión blanca; pendiente reemplazo por entrega en alta) */}
+            <motion.div
+              className="flex justify-center mb-10"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
             >
-              Mag<strong className="font-bold text-gold">Nitude</strong>
-            </motion.p>
+              <Image
+                src="/brand/magnitude-logo-white.png"
+                alt="MAGnitude"
+                width={1600}
+                height={250}
+                sizes="(min-width: 768px) 320px, 240px"
+                className="w-[240px] md:w-[320px] h-auto"
+              />
+            </motion.div>
 
             <motion.p
               className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-12 font-light"

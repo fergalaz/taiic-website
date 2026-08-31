@@ -71,10 +71,10 @@ export default function Experiencia() {
                   delay: index * 0.05,
                 }}
               >
-                <span className="text-[10px] uppercase tracking-[0.32em] text-gold font-light">
+                <span className="text-xs md:text-sm uppercase tracking-[0.32em] text-gold font-light">
                   {c.eyebrow}
                 </span>
-                <span className="text-base md:text-lg font-light tracking-[0.01em] leading-[1.4]">
+                <span className="text-lg md:text-xl font-light tracking-[0.01em] leading-[1.4]">
                   {c.valor}
                 </span>
               </motion.div>
@@ -94,11 +94,11 @@ export default function Experiencia() {
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
             className="flex justify-center mb-12 md:mb-14"
           >
-            <Logo variant="dark" size={68} />
+            <Logo variant="dark" size={104} />
           </motion.div>
 
           <motion.p
-            className="text-sm md:text-base uppercase tracking-[0.4em] text-gold mb-12 md:mb-14 font-light"
+            className="text-sm md:text-base uppercase tracking-[0.4em] text-gold mb-12 md:mb-14 font-bold"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"

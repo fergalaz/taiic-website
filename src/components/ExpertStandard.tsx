@@ -32,9 +32,9 @@ export default function ExpertStandard() {
       id="expert-standard"
       className="bg-paper text-[color:var(--ink-warm)]"
     >
-      {/* Spread editorial — panel de speakers (preview iStock 1757744098, agosto 2026). */}
+      {/* Spread editorial — panel de speakers v2 (foto elegida por cliente, ID iStock por confirmar). */}
       <Spread
-        src="/imagery/06-speakers-panel-PREVIEW.jpg"
+        src="/imagery/06-speakers-panel-v2-PREVIEW.jpg"
         alt="Panel de speakers conversando en el escenario de una conferencia"
         ratio="cinemascope"
         caption="Expert standard"
