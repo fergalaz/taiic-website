@@ -11,7 +11,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  heroImage = "/imagery/11-hero-door-PREVIEW.jpg",
+  heroImage = "/imagery/12-hero-sphere-PREVIEW.jpg",
   objectPosition = "center",
 }: HeroProps) {
   return (
@@ -23,7 +23,7 @@ export default function Hero({
       <div className="absolute inset-0">
         <Image
           src={heroImage}
-          alt="Portal de luz sobre un paisaje oscuro y ondulante"
+          alt="Esfera espiral escultórica en tonos claros"
           fill
           priority
           sizes="100vw"
