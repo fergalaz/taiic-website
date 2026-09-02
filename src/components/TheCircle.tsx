@@ -18,7 +18,7 @@ export default function TheCircle() {
   return (
     <section
       id="circle"
-      className="bg-paper text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+      className="bg-paper text-[color:var(--ink-warm)] pt-32 md:pt-44 pb-20 md:pb-28 px-6 md:px-10"
     >
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16 md:mb-20">
@@ -85,15 +85,17 @@ export default function TheCircle() {
         </div>
 
         <motion.p
-          className="mt-14 md:mt-16 text-sm md:text-[15px] leading-[1.7] font-light text-[color:var(--ink-warm)]/60 max-w-[70ch]"
+          className="mt-10 md:mt-12 text-sm md:text-[15px] leading-[1.7] font-light text-[color:var(--ink-warm)]/60"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
         >
-          Admission is by invitation or application. Terms are set out in a
-          private membership memorandum, available on request.
+          Admission is by invitation or application.
+          <br />
+          Terms are set out in a private membership memorandum, available on
+          request.
         </motion.p>
       </div>
     </section>

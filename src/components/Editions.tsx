@@ -11,7 +11,7 @@ export default function Editions() {
   return (
     <section
       id="editions"
-      className="bg-cream text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+      className="bg-cream text-[color:var(--ink-warm)] py-24 md:py-32 px-6 md:px-10"
     >
       <div className="max-w-[920px] mx-auto text-center">
         <motion.p
@@ -50,7 +50,7 @@ export default function Editions() {
         </motion.p>
 
         <motion.p
-          className="mt-14 md:mt-16 text-2xl md:text-3xl lg:text-[2.4rem] font-light tracking-[0.02em] leading-[1.3]"
+          className="mt-10 md:mt-12 text-2xl md:text-3xl lg:text-[2.4rem] font-light tracking-[0.02em] leading-[1.3]"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

@@ -11,7 +11,7 @@ const fadeUp = {
 export default function Premise() {
   return (
     <section id="premise" className="bg-cream text-[color:var(--ink-warm)]">
-      <div className="px-6 md:px-10 py-32 md:py-44">
+      <div className="px-6 md:px-10 pt-28 md:pt-36 pb-20 md:pb-24">
         <div className="max-w-[920px] mx-auto text-center">
           <motion.div
             variants={fadeUp}
@@ -36,15 +36,16 @@ export default function Premise() {
           </motion.p>
 
           <motion.h2
-            className="text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.4rem] font-light tracking-[0.02em] leading-[1.2] max-w-[26ch] mx-auto"
+            className="text-[2rem] sm:text-4xl md:text-[2.6rem] lg:text-[3rem] font-light tracking-[0.02em] leading-[1.2] mx-auto"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.12 }}
           >
-            AI is no longer a technology question. It is{" "}
-            <strong className="font-bold">a business-model question</strong>.
+            AI is no longer a technology question.
+            <br />
+            It is <strong className="font-bold">a business-model question</strong>.
           </motion.h2>
 
           <motion.p

@@ -13,7 +13,7 @@ export default function AdvisoryTeaser() {
   return (
     <section
       id="advisory"
-      className="bg-cream text-[color:var(--ink-warm)] py-24 md:py-32 px-6 md:px-10"
+      className="bg-cream text-[color:var(--ink-warm)] py-14 md:py-20 px-6 md:px-10"
     >
       <div className="max-w-[920px] mx-auto">
         <motion.div

@@ -46,8 +46,10 @@ export default function TheForum() {
         >
           The Forum extends the Circle&rsquo;s standard to a wider audience:
           evidence-based sessions on artificial intelligence for executives
-          across the region. Sponsors support the Forum; they do not appear on
-          its agenda.
+          across the region.
+          <span className="block mt-4">
+            Sponsors support the Forum; they do not appear on its agenda.
+          </span>
         </motion.p>
       </div>
     </section>

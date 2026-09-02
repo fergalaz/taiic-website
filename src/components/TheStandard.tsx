@@ -41,7 +41,7 @@ export default function TheStandard() {
         grayscale
       />
 
-      <div className="px-6 md:px-10 py-32 md:py-44">
+      <div className="px-6 md:px-10 pt-32 md:pt-44 pb-20 md:pb-28">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-20 md:mb-28">
             <motion.p
@@ -101,7 +101,7 @@ export default function TheStandard() {
           </ul>
 
           <motion.p
-            className="mt-16 md:mt-20 text-xl md:text-2xl lg:text-[1.7rem] font-light tracking-[0.01em] leading-[1.5] max-w-[46ch]"
+            className="mt-12 md:mt-14 text-xl md:text-2xl lg:text-[1.7rem] font-light tracking-[0.01em] leading-[1.5] max-w-[46ch]"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -114,7 +114,7 @@ export default function TheStandard() {
           </motion.p>
 
           <motion.div
-            className="mt-14 md:mt-16 border-t border-gold border-b py-8 max-w-[68ch]"
+            className="mt-10 md:mt-12 border-t border-gold border-b py-8 max-w-[68ch]"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"

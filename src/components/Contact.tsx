@@ -66,17 +66,17 @@ export default function Contact() {
     "w-full bg-transparent border-0 border-b border-[color:var(--ink-warm)]/25 px-0 py-3 text-[color:var(--ink-warm)] placeholder:text-[color:var(--ink-warm)]/35 focus:border-gold focus:outline-none transition-colors duration-500 text-base font-light tracking-[0.01em]";
 
   const labelClasses =
-    "block text-[10px] uppercase tracking-[0.28em] text-[color:var(--ink-warm)]/55 mb-3 font-light";
+    "block text-xs md:text-sm uppercase tracking-[0.28em] text-gold mb-3 font-bold";
 
   return (
     <section
       id="contact"
-      className="bg-cream text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+      className="bg-cream text-[color:var(--ink-warm)] pt-24 md:pt-32 pb-24 md:pb-32 px-6 md:px-10"
     >
       <div className="max-w-[1100px] mx-auto">
-        <div className="text-center mb-20 md:mb-28">
+        <div className="text-center mb-14 md:mb-16">
           <motion.p
-            className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-6 font-bold"
+            className="text-sm md:text-base uppercase tracking-[0.4em] text-gold mb-6 font-bold"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -106,7 +106,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
           >
             For enquiries regarding membership, the Forum, sponsorship of the
-            Forum, or press.
+            Forum, or&nbsp;press.
           </motion.p>
 
           <motion.p

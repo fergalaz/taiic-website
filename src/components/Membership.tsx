@@ -11,11 +11,11 @@ export default function Membership() {
   return (
     <section
       id="membership"
-      className="bg-paper text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+      className="bg-paper text-[color:var(--ink-warm)] py-20 md:py-28 px-6 md:px-10"
     >
       <div className="max-w-[920px] mx-auto text-center border-t border-[color:var(--ink-warm)]/15 pt-14 md:pt-16">
         <motion.p
-          className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-8 font-bold"
+          className="text-sm md:text-base uppercase tracking-[0.4em] text-gold mb-8 font-bold"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

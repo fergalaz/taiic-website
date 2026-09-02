@@ -90,11 +90,11 @@ export default function AdvisoryContent() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: [0.32, 0.72, 0, 1] }}
             >
-              <div className="relative w-full aspect-[4/5] max-h-[70vh] overflow-hidden bg-[color:var(--ink-warm)]/10">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-[color:var(--ink-warm)]/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/imagery/08-carbon-sphere-PREVIEW.jpg"
-                  alt="Faceted dark sphere on a black background"
+                  src="/imagery/15-keys-PREVIEW.jpg"
+                  alt="Antique keys standing upright in sand"
                   className="w-full h-full object-cover"
                 />
               </div>

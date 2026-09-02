@@ -33,13 +33,11 @@ export default function Home() {
         <TheStandard />
         <Editions />
         <Room />
-        {/* Editorial spread — networking (preview iStock 1633281467).
-            objectPosition keeps heads visible in the cinemascope crop. */}
+        {/* Editorial spread — blurred lobby crowd (preview iStock 1176681661, client pick) */}
         <Spread
-          src="/imagery/09-networking-cocktail-PREVIEW.jpg"
-          alt="Executives in conversation during a networking reception"
+          src="/imagery/14-networking-blur-PREVIEW.jpg"
+          alt="Blurred figures moving through a bright modern lobby"
           ratio="cinemascope"
-          objectPosition="center 22%"
           grayscale
         />
         <About />

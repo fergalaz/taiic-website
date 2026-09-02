@@ -58,8 +58,8 @@ export default function Hero({
             width={1813}
             height={892}
             priority
-            sizes="(min-width: 1024px) 480px, (min-width: 768px) 440px, 64vw"
-            className="w-[64vw] max-w-[480px] h-auto"
+            sizes="(min-width: 1024px) 420px, (min-width: 768px) 390px, 58vw"
+            className="w-[58vw] max-w-[420px] h-auto"
           />
 
           {/* Tagline */}
@@ -73,7 +73,7 @@ export default function Hero({
             The AI Insight Circle is where senior leadership across Latin
             America and the Caribbean examines the evidence on artificial
             intelligence — measured performance, regulatory risk, economic
-            impact — before adoption decisions are made.
+            impact — before adoption decisions are&nbsp;made.
           </p>
 
           {/* Triad */}

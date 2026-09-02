@@ -11,11 +11,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-paper text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+      className="bg-paper text-[color:var(--ink-warm)] pt-28 md:pt-36 pb-20 md:pb-24 px-6 md:px-10"
     >
       <div className="max-w-[920px] mx-auto text-center">
         <motion.p
-          className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-10 font-bold"
+          className="text-[11px] md:text-xs uppercase tracking-[0.36em] text-gold mb-10 font-bold"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -36,7 +36,8 @@ export default function About() {
           The AI Insight Circle is the closed room where senior leadership
           reviews the groundwork of due diligence on artificial intelligence:
           empirical performance, regulatory risk, professional responsibility,
-          internal governance, and the impact on revenue, margins, and talent.
+          internal governance, and the impact on revenue, margins,
+          and&nbsp;talent.
         </motion.p>
 
         <motion.p
@@ -48,8 +49,8 @@ export default function About() {
           transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
         >
           The Circle does not complete the due diligence. It provides the
-          inputs.{" "}
-          <strong className="font-bold">
+          inputs.
+          <strong className="font-bold block mt-2">
             The adoption decision holds when those inputs reach the firm&rsquo;s
             own committee.
           </strong>

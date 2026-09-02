@@ -26,10 +26,10 @@ export default function Leadership() {
   return (
     <section
       id="leadership"
-      className="bg-cream text-[color:var(--ink-warm)] py-32 md:py-44 px-6 md:px-10"
+      className="bg-cream text-[color:var(--ink-warm)] pt-20 md:pt-28 pb-28 md:pb-36 px-6 md:px-10"
     >
       <div className="max-w-[1100px] mx-auto">
-        <p className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-12 font-bold text-center">
+        <p className="text-sm md:text-base uppercase tracking-[0.4em] text-gold mb-12 font-bold text-center">
           Leadership
         </p>
 
