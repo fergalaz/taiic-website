@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 const equipo = [
   {
     nombre: "Mauricio Agudelo",
-    rol: "Fundador & Director, The AI Insight Circle",
+    rol: "Founder & Director, The AI Insight Circle",
     foto: "/team/mauricio-agudelo.webp",
-    bio: "Más de dos décadas en la intersección de tecnología, economía y política pública en América Latina. Como director en CAF—Banco de Desarrollo de América Latina y el Caribe—construyó desde cero la plataforma de inversión en transformación digital de la institución, movilizando más de USD 5 mil millones en financiamiento y catalizando aproximadamente USD 10–12 mil millones en inversiones tecnológicas regionales. Hoy asesora a gobiernos, bancos de desarrollo y organizaciones sobre el impacto económico e institucional de la inteligencia artificial y las tecnologías estratégicas en mercados emergentes.",
+    bio: "Two decades at the intersection of technology, economics, and public policy in Latin America. As a director at CAF — Development Bank of Latin America and the Caribbean — he built the institution's digital-transformation investment platform, mobilizing over USD 5 billion in financing and catalyzing an estimated USD 10–12 billion in regional technology investment. He advises governments, development banks, and boards on the economic and institutional impact of artificial intelligence.",
   },
   {
     nombre: "Bernardita Oyarzún",
-    rol: "Co-Fundadora & Directora, BOI Events Strategic Partner",
+    rol: "Co-Founder & Director, The AI Insight Circle · Founder, BOI Events",
     foto: "/team/bernardita-oyarzun.webp",
-    bio: "Amplia trayectoria en programación ejecutiva para alta dirección y relacionamiento con stakeholders de alto nivel en toda la región. Co-dirige la programación del foro y la curaduría de speakers internacionales. Su experiencia en el diseño de experiencias estratégicas para audiencias de liderazgo garantiza que cada edición de The AI Insight Circle cumpla con los más altos estándares, liderando además la orquestación integral de cada encuentro.",
+    bio: "Extensive record in executive programming and senior-stakeholder relations across the region. She co-directs the program and the curation of international speakers, and leads the production of each edition.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function Leadership() {
     >
       <div className="max-w-[1100px] mx-auto">
         <p className="text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-gold mb-12 font-bold text-center">
-          Leadership / Curatorship
+          Leadership
         </p>
 
         <div className="space-y-24 md:space-y-32 border-t border-[color:var(--ink-warm)]/15 pt-14 md:pt-16">

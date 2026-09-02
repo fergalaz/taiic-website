@@ -23,7 +23,7 @@ export default function Hero({
       <div className="absolute inset-0">
         <Image
           src={heroImage}
-          alt="Esfera espiral escultórica en tonos claros"
+          alt="Sculptural spiral sphere in light tones"
           fill
           priority
           sizes="100vw"
@@ -63,29 +63,34 @@ export default function Hero({
           />
 
           {/* Tagline */}
-          <p className="text-lg md:text-2xl text-white/90 mt-10 md:mt-12 font-light tracking-wide max-w-[44ch]">
-            Debida diligencia en inteligencia artificial
-            <br className="hidden md:block" /> para la alta dirección.
+          <p className="text-lg md:text-2xl text-white/90 mt-10 md:mt-12 font-light tracking-wide max-w-[48ch]">
+            Not another AI conference.
+            <br className="hidden md:block" /> Due diligence before adoption.
           </p>
 
-          {/* Bajada — versión agosto 2026 */}
+          {/* Lede — client content Sept 2026 */}
           <p className="text-sm md:text-base text-white/70 mt-6 md:mt-8 font-light leading-[1.8] max-w-[62ch]">
-            Un círculo privado donde los principales tomadores de decisiones de
-            América Latina analizan el impacto real y medible de la IA en
-            sectores estratégicos — con expertos globales de primer nivel,
-            evidencia sectorial y sin ruido comercial.
+            The AI Insight Circle is where senior leadership across Latin
+            America and the Caribbean examines the evidence on artificial
+            intelligence — measured performance, regulatory risk, economic
+            impact — before adoption decisions are made.
+          </p>
+
+          {/* Triad */}
+          <p className="text-[11px] md:text-xs uppercase tracking-[0.32em] text-gold mt-8 md:mt-10 font-bold">
+            Peers &middot; Evidence &middot; Method
           </p>
         </motion.div>
       </div>
 
       {/* Scroll cue — minimal */}
       <a
-        href="#experiencia"
+        href="#premise"
         className="absolute bottom-10 md:bottom-14 left-1/2 -translate-x-1/2 z-10 group flex flex-col items-center gap-3 text-white/65 hover:text-gold transition-colors duration-500"
-        aria-label="Ver experiencia"
+        aria-label="Continue to content"
       >
         <span className="text-[10px] uppercase tracking-[0.32em] font-light">
-          Continuar
+          Continue
         </span>
         <ArrowDown
           size={16}

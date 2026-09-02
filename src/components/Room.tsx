@@ -2,14 +2,11 @@
 
 import { motion } from "framer-motion";
 
-const audiencia = [
-  "Socios directores",
-  "Asesores jurídicos generales",
-  "CEOs",
-  "COOs",
-  "CFOs",
-  "Miembros de directorio",
-  "Líderes seleccionados del sector público",
+const audience = [
+  "Managing partners and executive committees",
+  "General counsel and chief legal officers",
+  "Boards and C-suite of leading companies",
+  "Selected public-sector leadership",
 ];
 
 const fadeUp = {
@@ -17,15 +14,15 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function ForWhom() {
+export default function Room() {
   return (
     <section
-      id="for-whom"
+      id="room"
       className="bg-cream text-[color:var(--ink-warm)] py-24 md:py-28 px-6 md:px-10"
     >
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-20 items-center">
-          {/* Columna izquierda — graphic editorial */}
+          {/* Left column — editorial graphic */}
           <motion.div
             className="lg:col-span-5"
             variants={fadeUp}
@@ -38,7 +35,7 @@ export default function ForWhom() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/imagery/07-chess-queen-PREVIEW.jpg"
-                alt="Reina de ajedrez a contraluz sobre superficie reflectante"
+                alt="Chess queen in silhouette on a reflective surface"
                 className="w-full h-full object-cover grayscale"
                 style={{ objectPosition: "center" }}
               />
@@ -51,12 +48,12 @@ export default function ForWhom() {
                 }}
               />
               <span className="absolute bottom-6 left-6 text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-white/85 font-light">
-                For whom
+                The room
               </span>
             </div>
           </motion.div>
 
-          {/* Columna derecha — título + lista compacta */}
+          {/* Right column — title + list */}
           <div className="lg:col-span-7">
             <motion.p
               className="text-[11px] md:text-xs uppercase tracking-[0.4em] text-gold mb-7 font-bold"
@@ -66,7 +63,7 @@ export default function ForWhom() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
             >
-              For whom
+              The room
             </motion.p>
 
             <motion.h2
@@ -77,15 +74,11 @@ export default function ForWhom() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.08 }}
             >
-              La sala está pensada para{" "}
-              <strong className="font-bold">
-                quienes deciden, no para quienes opinan
-              </strong>
-              .
+              Who is <strong className="font-bold">in the room</strong>.
             </motion.h2>
 
             <ul className="border-t border-[color:var(--ink-warm)]/15">
-              {audiencia.map((item, index) => (
+              {audience.map((item, index) => (
                 <motion.li
                   key={item}
                   className="border-b border-[color:var(--ink-warm)]/15"
@@ -99,7 +92,7 @@ export default function ForWhom() {
                     delay: index * 0.04,
                   }}
                 >
-                  <div className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[4rem_1fr] gap-4 md:gap-6 items-baseline py-4 md:py-5">
+                  <div className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[4rem_1fr] gap-4 md:gap-6 items-baseline py-5 md:py-6">
                     <span className="text-gold text-[11px] md:text-xs tracking-[0.22em] font-bold">
                       {String(index + 1).padStart(2, "0")}
                     </span>

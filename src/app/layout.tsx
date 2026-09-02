@@ -10,15 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title:
-    "The AI Insight Circle | Debida diligencia en IA para la alta dirección",
+  title: "The AI Insight Circle — Due diligence before adoption",
   description:
-    "Círculo privado donde los principales tomadores de decisiones de América Latina analizan el impacto real y medible de la IA en sectores estratégicos — con expertos globales, evidencia sectorial y sin ruido comercial.",
+    "A private circle where senior leadership across Latin America and the Caribbean examines the evidence on artificial intelligence before adoption decisions are made.",
   openGraph: {
-    title:
-      "The AI Insight Circle | Debida diligencia en IA para la alta dirección",
+    title: "The AI Insight Circle — Due diligence before adoption",
     description:
-      "40–60 participantes seleccionados · Análisis profundos por sector · Formato Chatham House.",
+      "40 to 60 participants per edition · One sector per edition · Chatham House Rule.",
     type: "website",
   },
 };
@@ -29,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} antialiased`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${inter.variable} antialiased`} data-scroll-behavior="smooth">
       <body className="min-h-[100dvh]">
         {/* Noise overlay */}
         <div

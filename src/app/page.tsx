@@ -1,13 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Experiencia from "@/components/Experiencia";
-import Contenidos from "@/components/Contenidos";
-import ForWhom from "@/components/ForWhom";
-import ExpertStandard from "@/components/ExpertStandard";
-import SobreNosotros from "@/components/SobreNosotros";
-import Magnitude from "@/components/Magnitude";
+import Premise from "@/components/Premise";
+import TheCircle from "@/components/TheCircle";
+import TheForum from "@/components/TheForum";
+import TheStandard from "@/components/TheStandard";
+import Editions from "@/components/Editions";
+import Room from "@/components/Room";
+import About from "@/components/About";
+import AdvisoryTeaser from "@/components/AdvisoryTeaser";
 import Leadership from "@/components/Leadership";
-import Contacto from "@/components/Contacto";
+import Membership from "@/components/Membership";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Spread from "@/components/Spread";
 
@@ -17,30 +20,33 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Experiencia />
-        {/* Spread editorial — ventana circular (preview iStock 1196259255, agosto 2026) */}
+        <Premise />
+        {/* Editorial spread — circular window (preview iStock 1196259255) */}
         <Spread
           src="/imagery/05-circle-sunset-PREVIEW.jpg"
-          alt="Silueta contemplando el atardecer a través de una ventana circular"
+          alt="Silhouette watching the sunset through a circular window"
           ratio="cinemascope"
           grayscale
         />
-        <Contenidos />
-        <ForWhom />
-        <ExpertStandard />
-        {/* Spread editorial — networking (preview iStock 1633281467, agosto 2026).
-            objectPosition alto para no cortar las cabezas en el crop cinemascope. */}
+        <TheCircle />
+        <TheForum />
+        <TheStandard />
+        <Editions />
+        <Room />
+        {/* Editorial spread — networking (preview iStock 1633281467).
+            objectPosition keeps heads visible in the cinemascope crop. */}
         <Spread
           src="/imagery/09-networking-cocktail-PREVIEW.jpg"
-          alt="Ejecutivos conversando durante un cóctel de networking"
+          alt="Executives in conversation during a networking reception"
           ratio="cinemascope"
           objectPosition="center 22%"
           grayscale
         />
-        <SobreNosotros />
-        <Magnitude />
+        <About />
+        <AdvisoryTeaser />
         <Leadership />
-        <Contacto />
+        <Membership />
+        <Contact />
       </main>
       <Footer />
     </>

@@ -6,12 +6,11 @@ import { List, X } from "@phosphor-icons/react";
 import Logo from "./Logo";
 
 const navLinks = [
-  { label: "Experiencia", href: "#experiencia" },
-  { label: "Sectores", href: "#contenidos" },
-  { label: "Sobre", href: "#sobre-nosotros" },
-  { label: "MagNitude", href: "#magnitude" },
-  { label: "Contacto", href: "#contacto" },
-  { label: "Solicite su invitación", href: "/registro", highlight: true },
+  { label: "The Circle", href: "#circle" },
+  { label: "The Forum", href: "#forum" },
+  { label: "Advisory", href: "/advisory", highlight: true },
+  { label: "Membership", href: "#membership" },
+  { label: "Contact", href: "#contact" },
 ];
 
 function handleSmoothScroll(
@@ -28,7 +27,12 @@ function handleSmoothScroll(
   onAfter?.();
 }
 
-export default function Navbar() {
+interface NavbarProps {
+  /** Prefijo para los anchors: "" en el home, "/" en subpáginas (p. ej. /advisory). */
+  anchorPrefix?: string;
+}
+
+export default function Navbar({ anchorPrefix = "" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -56,8 +60,9 @@ export default function Navbar() {
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-5 flex items-center justify-between">
           {/* Logo solo aparece después de salir del hero */}
           <a
-            href="#"
+            href={anchorPrefix || "#"}
             onClick={(e) => {
+              if (anchorPrefix) return;
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
@@ -79,7 +84,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`relative z-50 w-10 h-10 flex items-center justify-center hover:text-gold transition-colors duration-500 ${textColor}`}
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             style={isOpen ? { color: "#FFFFFF" } : undefined}
           >
             {isOpen ? (
@@ -104,7 +109,11 @@ export default function Navbar() {
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.label}
-                  href={link.href}
+                  href={
+                    link.href.startsWith("#")
+                      ? anchorPrefix + link.href
+                      : link.href
+                  }
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 12 }}
@@ -114,7 +123,13 @@ export default function Navbar() {
                     ease: [0.32, 0.72, 0, 1],
                   }}
                   onClick={(e) =>
-                    handleSmoothScroll(e, link.href, () => setIsOpen(false))
+                    handleSmoothScroll(
+                      e,
+                      link.href.startsWith("#")
+                        ? anchorPrefix + link.href
+                        : link.href,
+                      () => setIsOpen(false)
+                    )
                   }
                   className={`text-2xl md:text-3xl font-light tracking-[0.08em] uppercase transition-colors duration-300 ${
                     link.highlight

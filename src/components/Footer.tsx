@@ -1,17 +1,22 @@
 "use client";
 
-import { ArrowUp, LinkedinLogo } from "@phosphor-icons/react";
+import { ArrowUp } from "@phosphor-icons/react";
 import Logo from "./Logo";
 
 const navLinks = [
-  { label: "Experiencia", href: "#experiencia" },
-  { label: "Sectores", href: "#contenidos" },
-  { label: "Sobre", href: "#sobre-nosotros" },
-  { label: "MagNitude", href: "#magnitude" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "The Circle", href: "#circle" },
+  { label: "The Forum", href: "#forum" },
+  { label: "Advisory", href: "/advisory" },
+  { label: "Membership", href: "#membership" },
+  { label: "Contact", href: "#contact" },
 ];
 
-export default function Footer() {
+interface FooterProps {
+  /** Prefijo para los anchors: "" en el home, "/" en subpáginas. */
+  anchorPrefix?: string;
+}
+
+export default function Footer({ anchorPrefix = "" }: FooterProps) {
   return (
     <footer className="bg-ink pt-24 pb-10 px-4 relative">
       {/* Gold line separator at top */}
@@ -31,7 +36,11 @@ export default function Footer() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={
+                link.href.startsWith("#")
+                  ? anchorPrefix + link.href
+                  : link.href
+              }
               className="text-sm md:text-base text-text-secondary hover:text-text-primary transition-colors duration-300"
             >
               {link.label}
@@ -39,33 +48,11 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Partner — BOI Events */}
-        <div className="flex items-center justify-center mb-14">
-          <div className="flex items-center gap-4 text-text-primary/70">
-            {/* Logo placeholder — reemplazar por logo oficial BOI Events */}
-            <div className="w-12 h-12 rounded-md border border-accent/30 bg-accent/5 flex items-center justify-center text-[10px] font-mono uppercase tracking-wider text-accent/60">
-              Logo
-            </div>
-            <p className="text-sm md:text-base font-light tracking-wide">
-              Powered by
-              <br className="hidden md:block" />
-              <span className="font-medium text-text-primary">
-                BOI Events Strategic Partner
-              </span>
-            </p>
-          </div>
-        </div>
-
-        {/* Social + Back to top */}
-        <div className="flex items-center justify-center gap-6 mb-12">
-          <a
-            href="#"
-            className="w-11 h-11 rounded-full border border-white/[0.1] flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent/30 transition-all duration-300"
-            aria-label="LinkedIn"
-          >
-            <LinkedinLogo weight="light" size={20} />
-          </a>
-        </div>
+        {/* Credit */}
+        <p className="text-center text-sm md:text-base font-light tracking-wide text-text-primary/70 mb-12">
+          Executive production —{" "}
+          <span className="font-medium text-text-primary">BOI Events</span>
+        </p>
 
         {/* Back to top */}
         <div className="flex justify-center mb-12">
@@ -77,7 +64,7 @@ export default function Footer() {
             }}
             className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.15em] text-text-secondary/50 hover:text-accent transition-colors duration-300"
           >
-            Volver al inicio
+            Back to top
             <ArrowUp weight="bold" size={12} />
           </a>
         </div>
@@ -85,7 +72,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 text-center">
           <p className="font-mono text-xs text-text-secondary/50">
-            &copy; 2026 The AI Insight Circle. Todos los derechos reservados.
+            &copy; 2026 The AI Insight Circle. All rights reserved.
           </p>
         </div>
       </div>
