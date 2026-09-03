@@ -58,7 +58,8 @@ export default function Navbar({ anchorPrefix = "" }: NavbarProps) {
         className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-500 ${headerBg}`}
       >
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-5 flex items-center justify-between">
-          {/* Logo solo aparece después de salir del hero */}
+          {/* Wordmark siempre visible — única aparición del nombre en el
+              primer viewport (el hero ya no lleva lockup) */}
           <a
             href={anchorPrefix || "#"}
             onClick={(e) => {
@@ -66,20 +67,17 @@ export default function Navbar({ anchorPrefix = "" }: NavbarProps) {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className={`flex items-center gap-3 group transition-opacity duration-500 ${
-              scrolled ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-            aria-hidden={!scrolled}
-            tabIndex={scrolled ? 0 : -1}
+            className="flex items-center gap-3 group"
           >
-            <Logo variant="dark" size={32} />
-            <span className="text-[10px] uppercase tracking-[0.22em] font-light hidden sm:block text-[color:var(--ink-warm)]">
+            <Logo variant={scrolled ? "dark" : "light"} size={32} />
+            <span
+              className={`text-[10px] uppercase tracking-[0.22em] font-light hidden sm:block transition-colors duration-500 ${
+                scrolled ? "text-[color:var(--ink-warm)]" : "text-white"
+              }`}
+            >
               The AI Insight Circle
             </span>
           </a>
-
-          {/* Si no hay scroll, ocupamos el espacio izquierdo con un placeholder */}
-          {!scrolled && <span aria-hidden className="w-px h-px" />}
 
           <button
             onClick={() => setIsOpen(!isOpen)}

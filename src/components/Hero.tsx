@@ -2,24 +2,28 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowDown } from "@phosphor-icons/react";
 
 interface HeroProps {
-  /** Imagen de fondo (full-bleed). Default: silueta + skyline. */
+  /** Imagen de fondo (full-bleed). Default: esfera al costado derecho. */
   heroImage?: string;
   objectPosition?: string;
 }
 
+const doors = [
+  { label: "The Circle — the private room", href: "#circle" },
+  { label: "The Forum — the open program", href: "#forum" },
+];
+
 export default function Hero({
-  heroImage = "/imagery/13-hero-sphere-ext-PREVIEW.jpg",
-  objectPosition = "center top",
+  heroImage = "/imagery/16-hero-sphere-side-PREVIEW.jpg",
+  objectPosition = "70% center",
 }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-end justify-center overflow-hidden bg-black"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden bg-ink"
     >
-      {/* Background photo — silueta + skyline */}
+      {/* Background — esfera al costado, nunca sobre el mensaje */}
       <div className="absolute inset-0">
         <Image
           src={heroImage}
@@ -30,74 +34,60 @@ export default function Hero({
           style={{ objectPosition }}
           className="object-cover"
         />
-        {/* Editorial overlay — parte alta despejada para ver la foto,
-            mitad inferior oscura para legibilidad del bloque de textos */}
+        {/* Overlay navy — deja la esfera a baja opacidad y asegura contraste
+            del texto (más denso a la izquierda, donde vive el mensaje) */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.62) 62%, rgba(0,0,0,0.85) 100%)",
+              "linear-gradient(90deg, rgba(20,20,42,0.94) 0%, rgba(20,20,42,0.86) 45%, rgba(20,20,42,0.62) 100%)",
           }}
         />
       </div>
 
-      {/* Content anclado abajo (feedback cliente: aire arriba para ver la foto);
-          pb da espacio al scroll cue */}
-      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 pb-20 md:pb-24 text-center">
+      {/* Content — la tesis abre la página, alineada a la izquierda */}
+      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 pt-32 pb-20 md:pt-36 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.32, 0.72, 0, 1] }}
-          className="flex flex-col items-center"
+          transition={{ duration: 1.1, ease: [0.32, 0.72, 0, 1] }}
+          className="max-w-[720px]"
         >
-          {/* Lockup vertical brandbook — isotipo + wordmark (rev3 cliente) */}
-          <h1 className="sr-only">The AI Insight Circle</h1>
-          <Image
-            src="/brand/taiic-lockup-vertical.png"
-            alt="The AI Insight Circle"
-            width={1813}
-            height={892}
-            priority
-            sizes="(min-width: 1024px) 560px, (min-width: 768px) 500px, 72vw"
-            className="w-[72vw] max-w-[560px] h-auto"
-          />
+          <h1 className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-[4.2rem] font-light tracking-[0.01em] leading-[1.12] text-white">
+            Not another AI conference.{" "}
+            <strong className="font-bold">
+              Due diligence before adoption.
+            </strong>
+          </h1>
 
-          {/* Tagline */}
-          <p className="text-lg md:text-2xl text-white/90 mt-8 font-light tracking-wide max-w-[48ch]">
-            Not another AI conference.
-            <br className="hidden md:block" /> Due diligence before adoption.
-          </p>
-
-          {/* Lede — client content Sept 2026 */}
-          <p className="text-sm md:text-base text-white/70 mt-5 md:mt-6 font-light leading-[1.8] max-w-[66ch]">
+          <p className="mt-8 md:mt-10 text-base md:text-lg text-white/70 font-light leading-[1.8] max-w-[58ch]">
             The AI Insight Circle is where senior leadership across Latin
             America and the Caribbean examines the evidence on artificial
-            intelligence — measured performance, regulatory risk, economic
-            impact — before adoption decisions are&nbsp;made.
+            intelligence before adoption decisions are&nbsp;made.
           </p>
 
-          {/* Triad */}
-          <p className="text-[11px] md:text-xs uppercase tracking-[0.32em] text-gold mt-6 md:mt-8 font-bold">
+          <p className="mt-4 text-base md:text-lg text-white/90 font-normal tracking-[0.01em]">
+            Measured performance. Regulatory risk. Economic impact.
+          </p>
+
+          <p className="mt-8 md:mt-10 text-[11px] md:text-xs uppercase tracking-[0.32em] text-gold font-bold">
             Peers &middot; Evidence &middot; Method
           </p>
+
+          {/* Las dos puertas — enlaces de texto separados por filete dorado */}
+          <div className="mt-10 md:mt-12 pt-6 border-t border-gold/40 flex flex-wrap gap-x-10 gap-y-4">
+            {doors.map((door) => (
+              <a
+                key={door.href}
+                href={door.href}
+                className="text-[11px] md:text-xs uppercase tracking-[0.18em] text-white/70 hover:text-gold transition-colors duration-500 font-light"
+              >
+                {door.label}
+              </a>
+            ))}
+          </div>
         </motion.div>
       </div>
-
-      {/* Scroll cue — minimal */}
-      <a
-        href="#premise"
-        className="absolute bottom-5 md:bottom-6 left-1/2 -translate-x-1/2 z-10 group flex flex-col items-center gap-3 text-white/65 hover:text-gold transition-colors duration-500"
-        aria-label="Continue to content"
-      >
-        <span className="text-[10px] uppercase tracking-[0.32em] font-light">
-          Continue
-        </span>
-        <ArrowDown
-          size={16}
-          weight="light"
-          className="text-gold/80 group-hover:translate-y-1 transition-transform duration-500"
-        />
-      </a>
     </section>
   );
 }
