@@ -58,8 +58,8 @@ export default function Hero({
             width={1813}
             height={892}
             priority
-            sizes="(min-width: 1024px) 500px, (min-width: 768px) 450px, 66vw"
-            className="w-[66vw] max-w-[500px] h-auto"
+            sizes="(min-width: 1024px) 560px, (min-width: 768px) 500px, 72vw"
+            className="w-[72vw] max-w-[560px] h-auto"
           />
 
           {/* Tagline */}
