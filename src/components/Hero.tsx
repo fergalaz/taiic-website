@@ -43,7 +43,7 @@ export default function Hero({
 
       {/* Content anclado abajo (feedback cliente: aire arriba para ver la foto);
           pb da espacio al scroll cue */}
-      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 pb-28 md:pb-32 text-center">
+      <div className="relative z-10 max-w-[1280px] mx-auto w-full px-6 md:px-12 pb-20 md:pb-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,18 +58,18 @@ export default function Hero({
             width={1813}
             height={892}
             priority
-            sizes="(min-width: 1024px) 420px, (min-width: 768px) 390px, 58vw"
-            className="w-[58vw] max-w-[420px] h-auto"
+            sizes="(min-width: 1024px) 500px, (min-width: 768px) 450px, 66vw"
+            className="w-[66vw] max-w-[500px] h-auto"
           />
 
           {/* Tagline */}
-          <p className="text-lg md:text-2xl text-white/90 mt-10 md:mt-12 font-light tracking-wide max-w-[48ch]">
+          <p className="text-lg md:text-2xl text-white/90 mt-8 font-light tracking-wide max-w-[48ch]">
             Not another AI conference.
             <br className="hidden md:block" /> Due diligence before adoption.
           </p>
 
           {/* Lede — client content Sept 2026 */}
-          <p className="text-sm md:text-base text-white/70 mt-6 md:mt-8 font-light leading-[1.8] max-w-[62ch]">
+          <p className="text-sm md:text-base text-white/70 mt-5 md:mt-6 font-light leading-[1.8] max-w-[66ch]">
             The AI Insight Circle is where senior leadership across Latin
             America and the Caribbean examines the evidence on artificial
             intelligence — measured performance, regulatory risk, economic
@@ -77,7 +77,7 @@ export default function Hero({
           </p>
 
           {/* Triad */}
-          <p className="text-[11px] md:text-xs uppercase tracking-[0.32em] text-gold mt-8 md:mt-10 font-bold">
+          <p className="text-[11px] md:text-xs uppercase tracking-[0.32em] text-gold mt-6 md:mt-8 font-bold">
             Peers &middot; Evidence &middot; Method
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ export default function Hero({
       {/* Scroll cue — minimal */}
       <a
         href="#premise"
-        className="absolute bottom-10 md:bottom-14 left-1/2 -translate-x-1/2 z-10 group flex flex-col items-center gap-3 text-white/65 hover:text-gold transition-colors duration-500"
+        className="absolute bottom-5 md:bottom-6 left-1/2 -translate-x-1/2 z-10 group flex flex-col items-center gap-3 text-white/65 hover:text-gold transition-colors duration-500"
         aria-label="Continue to content"
       >
         <span className="text-[10px] uppercase tracking-[0.32em] font-light">
